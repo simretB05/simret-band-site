@@ -1,0 +1,69 @@
+@import "../../styles/styles.scss";
+
+
+.header{
+    background-color:$bandsite-black;
+    padding-top: $p-base;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include laptop-query{
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: $p-base $p-base*3;
+    }
+}
+
+.navbar{
+    width:100% ;
+    padding-top: $p-base;
+    @include laptop-query{
+    width: 18%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+     }
+     
+ &__list{
+    list-style: none;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    padding: 0;
+    @include laptop-query{
+        width: 100%;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+    }
+ }
+
+
+ &__list__item__bio{
+    width: 50%;
+    font-style:$ff-Avenir-bold;
+    text-align: center;
+    color: $silver;
+    &:hover{
+    content: "";
+    border-bottom: 0.3rem solid $white;
+    color:$Alabaster;
+     }
+ }
+
+  &__list__item__show{
+     width: 50%;
+     text-align: center;
+     font-style:$ff-Avenir-bold;
+     color: $silver;
+     &:hover{
+    content: "";
+    text-align: center;
+    color:$Alabaster;
+    border-bottom: 0.3rem solid $white;
+     }
+ }
+}

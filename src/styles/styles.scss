@@ -1,0 +1,18 @@
+
+@import './partials/colors';
+@import './partials/fonts';
+@import'./partials/mixins';
+@import'./partials/variables';
+
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+
+ font-family: $ff-Avenir-regular; 
+    
+}
+
