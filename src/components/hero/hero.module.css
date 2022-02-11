@@ -65,7 +65,7 @@ body {
 .hero__header {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Demi";
+  font-family: "Avenir Bold";
   font-weight: 600;
   position: relative;
   padding-left: 1rem;
@@ -226,7 +226,7 @@ body {
   .about__subheader {
     font-weight: 1.5rem;
     line-height: 2rem;
-    font-family: "Avenir Demi";
+    font-family: "Avenir Bold";
     padding: 1rem 1rem 0 5rem;
   }
 }
@@ -234,7 +234,7 @@ body {
   .about__subheader {
     font-weight: 1.5rem;
     line-height: 2rem;
-    font-family: "Avenir Demi";
+    font-family: "Avenir Bold";
     padding: 3rem 1rem 0 13rem;
   }
 }
@@ -347,7 +347,7 @@ body {
   width: 100%;
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Demi";
+  font-family: "Avenir Bold";
   padding: 1rem 1rem 0;
 }
 @media screen and (min-width: 768px) {

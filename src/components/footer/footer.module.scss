@@ -1,0 +1,261 @@
+@import "../../styles/styles.scss";
+
+
+
+.footer {
+  background-color: $bandsite-black;
+  padding-left: $p-base;
+  @include tablet-query {
+    width: 100%;
+    position: absolute;
+    padding: $p-base;
+  }
+  @include laptop-query {
+    width: 100%;
+    position: absolute;
+    padding-left: $p-base * 0.7;
+  }
+}
+.main {
+  padding-top: $p-base * 1.5;
+  @include tablet-query {
+    display: flex;
+    padding-top: $p-base * 2;
+    padding-bottom: $p-base;
+  }
+  @include laptop-query{
+    padding: $p-base * 1.5 0 $p-base $p-base * 5;
+  }
+  &__header {
+    color: $white;
+    @include sectionheadermob();
+    font-weight: 600;
+    margin-bottom: $m-base;
+    @include tablet-query {
+      margin: 0;
+      @include sectionheadermob();
+      padding-left: $p-base;
+      font-weight: 600;
+    }
+    @include laptop-query {
+      font-weight: 600;
+      margin: 0;
+      padding-right: $p-base * 3.9;
+      @include sectionheaderd();
+    }
+  }
+  &__icon {
+    padding-right: $p-base * 2;
+    @include laptop-query {
+      padding-right: $p-base * 0.5;
+      margin-left: $m-base * 2;
+      margin-right: 0;
+    }
+    @include laptop-query {
+      padding-right: $p-base * 0.5;
+      margin-left: $m-base * 2;
+      margin-right: 0;
+    }
+  }
+}
+.card {
+  margin-top: $m-base;
+  @include tablet-query {
+    display: flex;
+    margin-left: $m-base;
+  }
+  @include tablet-query {
+    display: flex;
+    align-content: center;
+    justify-content: start;
+    margin-left: $m-base * 6;
+  }
+}
+.card__container {
+  @include tablet-query {
+    width: 40%;
+    margin: 0 $m-base * 4.9 0 0;
+  }
+  @include laptop-query {
+    width: 23%;
+    margin: 0 $m-base * 4.9 0 0;
+  }
+}
+.card__info {
+  margin-bottom: $m-base;
+  color: $white;
+  @include headermob();
+  font-weight: 600;
+  @include tablet-query {
+    @include  footercopymob();
+  }
+  @include laptop-query {
+    @include footercopyd();
+  }
+}
+
+.card__info__name{
+  font-weight: 100;
+  @include subheadermob()
+}
+.card__info__position{
+  font-weight: 700;
+  @include subheadermob()
+}
+.card__address {
+  color: $white;
+  margin-bottom: $m-base;
+  @include footercopymob();
+  margin-bottom: $m-base * 2;
+  @include tablet-query {
+    margin-bottom: $m-base * 2;
+  }
+}
+.card__info__emailaddress {
+  color: $white;
+  margin-top: $m-base;
+  @include footercopymob();
+
+  @include tablet-query {
+    margin-top: $m-base * 1.3;
+
+    @include footercopymob();
+  }
+  @include laptop-query{
+    @include footercopymob();
+    margin-top: 2.7rem;
+  }
+}
+
+.ndcard__container {
+  @include tablet-query {
+    width: 40%;
+    margin-right: $m-base * 4;
+  }
+  @include laptop-query {
+    width: 23%;
+  }
+}
+.ndcard__info {
+  color: $white;
+ font-weight: 600;
+font-weight: normal;
+  @include tablet-query {
+    margin-bottom: 2.05rem;
+    @include footercopymob();
+  }
+  @include laptop-query {
+    @include footercopyd();
+  }
+}
+.ndcard__info__name{
+  font-weight: 100;
+  @include subheadermob()
+}
+.ndcard__info__location__bold{
+  font-weight: 700;
+  @include subheadermob()
+}
+.ndcard__info__address {
+  color: $white;
+  font-weight: 400;
+  @include footercopymob();
+  margin-top: 1rem;
+
+  @include tablet-query {
+    margin-bottom: 1rem;
+    @include footercopymob();
+  }
+  @include laptop-query {
+    @include footercopyd();
+  }
+}
+.ndcard__info__emailaddress {
+  color: $white;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+
+  @include tablet-query {
+    @include footercopymob();
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  @include laptop-query {
+    @include footercopyd();
+  }
+}
+.rdcard__container {
+  @include tablet-query {
+    width: 40%;
+  }
+  @include laptop-query {
+    width: 43%;
+  }
+}
+.rdcard__info {
+  color: $white;
+  @include footercopymob();
+  @include tablet-query {
+    @include footercopymob();
+    margin-bottom: 2.2rem;
+  }
+  @include laptop-query {
+    @include footercopyd();
+  }
+}
+.rdcard__info__name{
+  font-weight: 100;
+  @include subheadermob()
+}
+ .rdcard__info__location__bold{
+   font-weight: 600;
+ }
+.rdcard__info__address {
+  color: $white;
+  margin-top: 1rem;
+  @include footercopymob();
+  @include tablet-query {
+    @include footercopymob();
+  }
+  @include laptop-query {
+    @include footercopyd();
+  }
+}
+.rdcard__info__emailaddress {
+  color: $white;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.bottom__logo {
+  width: 120px;
+  height: 20px;
+  margin-top: $m-base * 1;
+  @include tablet-query {
+    position: relative;
+    top: -3.8rem;
+    right: 6rem;
+    margin: 0;
+  }
+  @include laptop-query {
+    position: relative;
+    top: -3.8;
+    right: 6rem;
+  }
+}
+.copyright__text {
+  width: 100%;
+  padding-top: $p-base * 0.5;
+  padding-bottom: $p-base;
+  color: $white;
+  @include copyright();
+
+  @include tablet-query {
+    padding-left: $p-base;
+    @include copyright();
+  }
+  @include laptop-query {
+    padding-left: $p-base * 6;
+    @include copyright();
+  }
+}
+

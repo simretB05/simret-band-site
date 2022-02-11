@@ -1,0 +1,430 @@
+@font-face {
+  font-family: "Avenir Regular";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Bold";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTProBold.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Demi";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+/***********************
+* MEDIA QUERIES
+************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Avenir Demi";
+}
+
+.footer {
+  background-color: #323232;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 100%;
+    position: absolute;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer {
+    width: 100%;
+    position: absolute;
+    padding-left: 0.7rem;
+  }
+}
+
+.main {
+  padding-top: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .main {
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main {
+    padding: 1.5rem 0 1rem 5rem;
+  }
+}
+.main__header {
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Bold";
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .main__header {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: "Avenir Bold";
+    padding-left: 1rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__header {
+    font-weight: 600;
+    margin: 0;
+    padding-right: 3.9rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "Avenir Bold";
+  }
+}
+.main__icon {
+  padding-right: 2rem;
+}
+@media screen and (min-width: 1024px) {
+  .main__icon {
+    padding-right: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main__icon {
+    padding-right: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 0;
+  }
+}
+
+.card {
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    margin-left: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .card {
+    display: flex;
+    align-content: center;
+    justify-content: start;
+    margin-left: 6rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card__container {
+    width: 40%;
+    margin: 0 4.9rem 0 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__container {
+    width: 23%;
+    margin: 0 4.9rem 0 0;
+  }
+}
+
+.card__info {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Bold";
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .card__info {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Regular";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__info {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: "Avenir Regular";
+  }
+}
+
+.card__info__name {
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+}
+
+.card__info__position {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+}
+
+.card__address {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Regular";
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .card__address {
+    margin-bottom: 2rem;
+  }
+}
+
+.card__info__emailaddress {
+  color: #ffffff;
+  margin-top: 1rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Regular";
+}
+@media screen and (min-width: 768px) {
+  .card__info__emailaddress {
+    margin-top: 1.3rem;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Regular";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .card__info__emailaddress {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Regular";
+    margin-top: 2.7rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ndcard__container {
+    width: 40%;
+    margin-right: 4rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ndcard__container {
+    width: 23%;
+  }
+}
+
+.ndcard__info {
+  color: #ffffff;
+  font-weight: 600;
+  font-weight: normal;
+}
+@media screen and (min-width: 768px) {
+  .ndcard__info {
+    margin-bottom: 2.05rem;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Regular";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ndcard__info {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: "Avenir Regular";
+  }
+}
+
+.ndcard__info__name {
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+}
+
+.ndcard__info__location__bold {
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+}
+
+.ndcard__info__address {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Regular";
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .ndcard__info__address {
+    margin-bottom: 1rem;
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Regular";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ndcard__info__address {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: "Avenir Regular";
+  }
+}
+
+.ndcard__info__emailaddress {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .ndcard__info__emailaddress {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Regular";
+    margin-top: 1.3rem;
+    margin-bottom: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .ndcard__info__emailaddress {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: "Avenir Regular";
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .rdcard__container {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rdcard__container {
+    width: 43%;
+  }
+}
+
+.rdcard__info {
+  color: #ffffff;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Regular";
+}
+@media screen and (min-width: 768px) {
+  .rdcard__info {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Regular";
+    margin-bottom: 2.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rdcard__info {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: "Avenir Regular";
+  }
+}
+
+.rdcard__info__name {
+  font-weight: 100;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+}
+
+.rdcard__info__location__bold {
+  font-weight: 600;
+}
+
+.rdcard__info__address {
+  color: #ffffff;
+  margin-top: 1rem;
+  font-size: 0.813rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Regular";
+}
+@media screen and (min-width: 768px) {
+  .rdcard__info__address {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Regular";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .rdcard__info__address {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-family: "Avenir Regular";
+  }
+}
+
+.rdcard__info__emailaddress {
+  color: #ffffff;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.bottom__logo {
+  width: 120px;
+  height: 20px;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .bottom__logo {
+    position: relative;
+    top: -3.8rem;
+    right: 6rem;
+    margin: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .bottom__logo {
+    position: relative;
+    top: -3.8;
+    right: 6rem;
+  }
+}
+
+.copyright__text {
+  width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+  color: #ffffff;
+  font-size: 0.7rem;
+  line-height: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .copyright__text {
+    padding-left: 1rem;
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .copyright__text {
+    padding-left: 6rem;
+    font-size: 0.7rem;
+    line-height: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+  }
+}/*# sourceMappingURL=footer.module.css.map */

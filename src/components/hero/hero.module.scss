@@ -236,12 +236,9 @@
   &__header {
     width: 100%;
     @include headermob();
-     
     padding: $p-base $p-base 0;
-
     @include tablet-query {
       @include sectionheaderd();
-
       padding: $p-base * 2.5 $p-base * 3 0 $p-base * 3.2;
     }
     @include laptop-query {

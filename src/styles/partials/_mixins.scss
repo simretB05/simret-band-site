@@ -39,7 +39,7 @@
 @mixin headermob {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Demi";
+  font-family: "Avenir Bold";
 }
 @mixin sectionheadermob {
   font-size: 1.5rem;
@@ -77,7 +77,7 @@
 @mixin subheaderd {
   font-weight: 1.5rem;
   line-height: 2rem;
-  font-family: "Avenir Demi";
+  font-family: "Avenir Bold";
    
 }
 @mixin bodycopyd {
@@ -90,6 +90,13 @@
   line-height: 1.25rem;
   font-family: "Avenir Regular";
 }
+@mixin copyright {
+  font-size: 0.7rem;
+  line-height: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
 // @mixin tablet {
 // @media only screen and (min-width: 768px) {
 // @content;
