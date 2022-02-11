@@ -1,0 +1,387 @@
+@font-face {
+  font-family: "Avenir Regular";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Bold";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTProBold.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Demi";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+/***********************
+* MEDIA QUERIES
+************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Avenir Demi";
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  background-color: #323232;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    width: 100%;
+    height: 506px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero {
+    width: 100%;
+    height: 700px;
+  }
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url(../../../public/assets/images/hero-bio.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top center;
+  opacity: 0.5;
+}
+
+.hero__header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Demi";
+  font-weight: 600;
+  position: relative;
+  padding-left: 1rem;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .hero__header {
+    font-size: 3.75rem;
+    line-height: 4.2rem;
+    font-family: "Avenir Bold";
+    padding-left: 2.5rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero__header {
+    font-size: 3.75rem;
+    line-height: 4.2rem;
+    font-family: "Avenir Bold";
+    padding-left: 3rem;
+    color: #ffffff;
+    font-weight: 600;
+  }
+}
+
+.about {
+  padding-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .about {
+    padding-top: 3rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about {
+    padding-top: 3rem;
+  }
+}
+.about__header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Bold";
+  padding: 1rem;
+  padding-top: 0;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .about__header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "Avenir Bold";
+    padding: 0 0 1.25rem 2.25rem;
+    font-weight: 600;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "Avenir Bold";
+    padding: 0 0 1rem 8rem;
+    font-weight: 600;
+  }
+}
+.about__image {
+  width: 100%;
+  display: block;
+  padding: 0 1rem;
+}
+@media screen and (min-width: 768px) {
+  .about__image {
+    display: block;
+    width: 100%;
+    padding: 0 6rem 1rem 6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__image {
+    width: 100%;
+    padding: 0 13rem 1rem 13rem;
+  }
+}
+.about__copy {
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+  text-align: justify;
+  padding: 1rem;
+  letter-spacing: 0.02rem;
+}
+@media screen and (min-width: 768px) {
+  .about__copy {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    width: 100%;
+    padding: 0 6rem 1rem 6rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.475rem;
+    font-style: normal;
+    letter-spacing: 1px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__copy {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    width: 84%;
+    padding: 0 13rem 0 13rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-style: normal;
+    letter-spacing: 0.89px;
+  }
+}
+.about__copy__refrence {
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+  padding: 0 1.2rem 2rem 1rem;
+  letter-spacing: 0.025rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 768px) {
+  .about__copy__refrence {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    width: 70%;
+    font-weight: 600;
+    font-size: 0.92rem;
+    padding: 0 6rem 1rem 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__copy__refrence {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    padding: 1.5rem 13rem 0 13rem;
+    font-weight: 700;
+    font-size: 0.87rem;
+    font-style: normal;
+    letter-spacing: 0.89px;
+  }
+}
+
+.about__subheader {
+  padding-left: 1rem;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+}
+@media screen and (min-width: 768px) {
+  .about__subheader {
+    font-weight: 1.5rem;
+    line-height: 2rem;
+    font-family: "Avenir Demi";
+    padding: 1rem 1rem 0 5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about__subheader {
+    font-weight: 1.5rem;
+    line-height: 2rem;
+    font-family: "Avenir Demi";
+    padding: 3rem 1rem 0 13rem;
+  }
+}
+
+.description {
+  width: 100%;
+  padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .description {
+    width: 100%;
+    padding: 0 4rem 1rem 4rem;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .description {
+    display: flex;
+    width: 100%;
+    padding: 0 4rem;
+    justify-content: center;
+  }
+}
+.description__copy__left {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Demi";
+  padding: 1.5rem 1.3rem 0 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 1.5rem 0.8rem 0 0;
+  font-weight: 400;
+}
+@media screen and (min-width: 768px) {
+  .description__copy__left {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    display: flex;
+    width: 50%;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .description__copy__left {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    width: 50%;
+    display: flex;
+    padding: 1rem 1rem 1rem 8.99rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+  }
+}
+.description__copy__right {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Demi";
+  padding: 1rem 1.6rem 1rem 0;
+  padding: 1.5rem 1.3rem 0 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding: 1.5rem 1rem 0 0;
+}
+@media screen and (min-width: 768px) {
+  .description__copy__right {
+    font-size: 1rem;
+    line-height: 1.125rem;
+    font-family: "Avenir Demi";
+    width: 50%;
+    padding: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .description__copy__right {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    width: 50%;
+    padding: 1rem 9.6rem 1rem 0;
+  }
+}
+
+.photo__gallery {
+  width: 100%;
+  background-color: #fafafa;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .photo__gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .photo__gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+  }
+}
+.photo__gallery__header {
+  width: 100%;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Demi";
+  padding: 1rem 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .photo__gallery__header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "Avenir Bold";
+    padding: 2.5rem 3rem 0 3.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .photo__gallery__header {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "Avenir Bold";
+    padding: 2.5rem 3rem 1rem 4.7rem;
+  }
+}
+.photo__gallery__image {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  padding-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .photo__gallery__image {
+    width: 30%;
+    display: flex;
+    padding: 0.5rem 0.5rem 1rem 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .photo__gallery__image {
+    width: 30%;
+    padding: 0.5rem 0.5rem 1rem 1rem;
+  }
+}/*# sourceMappingURL=hero.module.css.map */

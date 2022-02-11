@@ -1,18 +1,19 @@
 @font-face {
   font-family: "Avenir Regular";
   src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
-  font-weight: normal;
+  font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Bold";
   src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTProBold.ttf);
+  font-weight: 900;
   font-style: normal;
 }
 @font-face {
   font-family: "Avenir Demi";
   src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
 }
 /***********************
@@ -49,25 +50,20 @@ body {
 }
 @media screen and (min-width: 1024px) {
   .navbar {
-    width: 18%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    padding: 0;
+    width: 100%;
   }
 }
 .navbar__list {
   list-style: none;
   display: flex;
   justify-items: center;
-  align-items: center;
+  align-content: center;
   padding: 0;
 }
 @media screen and (min-width: 1024px) {
   .navbar__list {
-    width: 100%;
-    display: flex;
-    justify-items: center;
-    align-items: center;
+    padding: 0;
   }
 }
 .navbar__list__item__bio {
@@ -81,6 +77,11 @@ body {
   border-bottom: 0.3rem solid #ffffff;
   color: #fafafa;
 }
+@media screen and (min-width: 1024px) {
+  .navbar__list__item__bio {
+    width: 18%;
+  }
+}
 .navbar__list__item__show {
   width: 50%;
   text-align: center;
@@ -92,4 +93,14 @@ body {
   text-align: center;
   color: #fafafa;
   border-bottom: 0.3rem solid #ffffff;
+}
+@media screen and (min-width: 1024px) {
+  .navbar__list__item__show {
+    width: 18%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .navbar__list__item__show {
+    width: 18%;
+  }
 }/*# sourceMappingURL=header.module.css.map */

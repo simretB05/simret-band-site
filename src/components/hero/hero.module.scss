@@ -1,0 +1,267 @@
+@import "../../styles/styles.scss";
+.hero {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 200px;
+  align-items: center;
+  background-color: $bandsite-black;
+
+  @include tablet-query {
+    width: 100%;
+    height: 506px;
+  }
+  @include laptop-query {
+    width: 100%;
+    height: 700px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url(../../../public/assets/images/hero-bio.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top center;
+    opacity: 0.5;
+  }
+}
+
+.hero__header {
+  @include  headermob();
+  font-weight: 600;
+  position: relative;
+  padding-left: $p-base;
+  color: $white;
+
+
+  @include tablet-query {
+    @include desktabheaderd();
+    padding-left: $p-base * 2.5;
+    font-weight: 600;
+  }
+  @include laptop-query {
+    @include  desktabheaderd();
+    padding-left: $p-base*3;
+    color: $white;
+    font-weight: 600;
+  }
+}
+.about {
+  padding-top: $p-base * 2;
+  @include tablet-query {
+    padding-top: $p-base * 3;
+  }
+  @include laptop-query {
+    padding-top: $p-base * 3;
+  }
+  &__header {
+    @include  sectionheadermob();
+    padding: $p-base;
+    padding-top: 0;
+    font-weight: 600;
+
+    @include tablet-query {
+      @include  sectionheaderd();
+      padding: 0 0 $p-base * 1.25 $p-base * 2.25;
+      font-weight: 600
+    }
+    @include laptop-query {
+      @include  sectionheaderd();
+      padding: 0 0 $p-base $p-base * 8;
+       font-weight: 600;
+    }
+  }
+  &__image {
+    width: 100%;
+    display: block;
+    padding: 0 $p-base;
+
+    @include tablet-query {
+      display: block;
+      width: 100%;
+      padding: 0 $p-base * 6 $p-base $p-base * 6;
+    }
+    @include laptop-query{
+      width: 100%;
+      padding: 0 $p-base * 13 $p-base $p-base * 13;
+    }
+  }
+ &__copy {
+    width: 100%;
+    @include  subheadermob();
+    text-align: justify;
+    padding: $p-base;
+    letter-spacing: 0.02rem;
+
+    @include tablet-query {
+      @include bodycopyd();
+      width: 100%;
+      padding: 0 $p-base * 6 $p-base $p-base * 6;
+      font-weight: 700;
+      font-size: 1.2rem;
+      line-height: 1.475rem;
+      font-style: normal;
+      letter-spacing: 1px;
+    }
+    @include laptop-query {
+      @include bodycopyd();
+      width: 84%;
+      padding: 0 $p-base * 13 0 $p-base * 13;
+      font-weight: 700;
+      font-size: 1.2rem;
+      font-style: normal;
+      letter-spacing: 0.89px;
+    }
+  }
+  &__copy__refrence {
+    @include   subheadermob();
+    padding: 0 $p-base * 1.2 $p-base * 2 $p-base;
+    letter-spacing: 0.025rem;
+    font-weight: 600;
+
+    @include tablet-query {
+      @include bodycopyd();
+      width: 70%;
+      font-weight: 600;
+      font-size: 0.92rem;
+      padding: 0 $p-base * 6 $p-base $p-base * 5;
+    }
+    @include laptop-query {
+      @include bodycopyd();
+      padding: $p-base* 1.5 $p-base * 13 0 $p-base * 13;
+      font-weight: 700;
+      font-size: 0.87rem;
+      font-style: normal;
+      letter-spacing: 0.89px;
+    }
+  }
+}
+
+.about__subheader {
+  padding-left: $p-base;
+  @include  subheadermob();
+  
+  @include tablet-query {
+    @include subheaderd();
+    padding: $p-base $p-base 0 $p-base* 5;
+    
+  }
+  @include laptop-query {
+    @include subheaderd();
+    padding: $p-base*3 $p-base 0 $p-base * 13;
+  }
+}
+
+.description {
+  width: 100%;
+  padding-left: $p-base;
+  @include tablet-query {
+    width: 100%;
+    padding: 0 $p-base * 4 $p-base $p-base * 4;
+    display: flex;
+    justify-content: center;
+  }
+  @include laptop-query {
+    display: flex;
+    width: 100%;
+    padding: 0 $p-base * 4;
+    justify-content: center;
+  }
+
+  &__copy__left {
+    @include bodycopymob();
+    padding: $p-base * 1.5 $p-base * 1.3 0 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 1.5rem 0.8rem 0 0;
+    font-weight: 400;
+    @include tablet-query {
+      @include bodycopyd();
+      display: flex;
+      width: 50%;
+      padding: 1rem;
+    }
+    @include laptop-query{
+      @include bodycopyd();
+      width: 50%;
+      display: flex;
+      padding: 1rem 1rem 1rem 8.99rem;
+      @include bodycopyd();
+    }
+  }
+  &__copy__right {
+    @include bodycopymob();
+    padding: $p-base $p-base * 1.6 $p-base 0;
+    padding: $p-base * 1.5 $p-base * 1.3 0 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+      padding: 1.5rem 1rem 0 0;
+    @include tablet-query {
+      @include bodycopymob();
+      width: 50%;
+      padding: $p-base;
+    }
+    @include laptop-query {
+      @include bodycopyd();
+      width: 50%;
+      padding: $p-base $p-base * 9.6 $p-base 0;
+    }
+  }
+}
+
+.photo__gallery {
+  width: 100%;
+  background-color: $Alabaster;
+  padding-bottom: $p-base;
+
+  @include tablet-query {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @include laptop-query {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: $p-base * 2;
+  }
+
+  &__header {
+    width: 100%;
+    @include headermob();
+     
+    padding: $p-base $p-base 0;
+
+    @include tablet-query {
+      @include sectionheaderd();
+
+      padding: $p-base * 2.5 $p-base * 3 0 $p-base * 3.2;
+    }
+    @include laptop-query {
+      @include sectionheaderd();
+      padding: $p-base * 2.5 $p-base * 3 $p-base $p-base * 4.7;
+    }
+  }
+  &__image {
+    display: block;
+    width: 100%;
+    padding: $p-base;
+    padding-bottom: 0;
+    @include tablet-query {
+      width: 30%;
+      display: flex;
+      padding: $p-base * 0.5 $p-base * 0.5 $p-base $p-base;
+    }
+    @include laptop-query {
+      width: 30%;
+      padding: $p-base * 0.5 $p-base * 0.5 $p-base $p-base;
+    }
+  }
+}
