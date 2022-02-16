@@ -74,6 +74,7 @@ body {
 }
 .navbar__list__item__bio:hover {
   content: "";
+  padding-bottom: 1.5rem;
   border-bottom: 0.3rem solid #ffffff;
   color: #fafafa;
 }
@@ -92,6 +93,7 @@ body {
   content: "";
   text-align: center;
   color: #fafafa;
+  padding-bottom: 1.5rem;
   border-bottom: 0.3rem solid #ffffff;
 }
 @media screen and (min-width: 1024px) {

@@ -8,337 +8,71 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include laptop-query{
-    flex-direction: row;
-    justify-content: flex-start;
-    padding: $p-base $p-base*3;
-    }
-}
 
+   @include tablet-query{
+
+    flex-direction: row;
+    justify-items: center;
+    padding: $p-base $p-base*3;
+    
+   }
+}
 .navbar{
     width:100% ;
-    padding-top: $p-base;
-    @include laptop-query{
-padding: 0;
-    width:100%;
-  
-     }
-     
- &__list{
-    list-style: none;
-    display: flex;
-    justify-items: center;
-    align-content: center;
-    padding: 0;
-    @include laptop-query{
-        padding: 0;
+    @include tablet-query{
+padding-left: $p-base*2;
 
-    }
- }
-
-
- &__list__item__bio{
-    width: 50%;
-    font-style:$ff-Avenir-bold;
-    text-align: center;
-    color: $silver;
-    &:hover{
-    content: "";
-    border-bottom: 0.3rem solid $white;
-    color:$Alabaster;
-     }
-       @include laptop-query{
-        width: 18%;
-   
-
-    }
- }
-
-  &__list__item__show{
-     width: 50%;
-     text-align: center;
-     font-style:$ff-Avenir-bold;
-     color: $silver;
-     &:hover{
+  }
+    &__list{
+        padding:0;
+        display: flex;
+        justify-content:start;
+        align-items: center;
+        list-style: none;
+        @include tablet-query{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+        }
+    
+    &__item__bio{
+width: 50%;
+padding: $p-base 0 $p-base 0;
+color: $white;
+text-align: center;
+&:hover{
     content: "";
     text-align: center;
     color:$Alabaster;
+     padding-bottom: 1.5rem;
     border-bottom: 0.3rem solid $white;
-     }
-         @include laptop-query{
+ 
+}
+  @include tablet-query{
         width: 18%;
+        &:hover{
+            content: "";
+    text-align: center;
+    color:$Alabaster;
+     padding-bottom: 2.5rem;
+    border-bottom: 0.3rem solid $white;
+        }
    
 
     }
-        @include laptop-l-query{
-        width: 18%;
-   
-
     }
- }
+&__item__show{
+width: 50%;
+color: $white;
+padding: $p-base 0 $p-base 0;
+text-align: center;
+&:hover{
+    border-bottom: 3px solid $white;
+    
+}
+    }
+
+}
 }
 
 
-
-// .conv__title {
-//   padding-left: $padding;
-//   @include mobilesectionheader (); 
-//   @include tablet{
-//     @include sectionheader ();
-//     font-weight: 600;
-//     padding:$padding*2 $padding*3 $padding $padding*3;
-
-//   }
-    
-//    @include desktop{
-//     @include sectionheader ();
-//     font-weight: 600;
-//     padding:$padding*2 $padding*3 0 $padding*6;
-//   }
-
-// }
-// .conv-container {
-//   width: 100%;
-//   display: flex;
-//   padding:0 $padding;
-//   flex-direction: column;
-//   @include tablet{
-//     padding: 0 $padding*4
-    
-//   }
-//   @include desktop{
-//     padding:0 $padding*20;
-    
-//   }
-
-// }
- 
-// .form-container {
-//   width: 100%;
-//   display: flex;
-//   margin-top: $margin;
-//   @include tablet{
-
-//   }
-//   @include desktop{
-
-//   }
-// }
-
-
-// #form {
-//   color: $silver;
-//   margin-top: 0;
-//   padding-top: 0;
-//   padding-left: $padding * 0.6;
-//   width: 100%;
-//   font-weight: 600;
-  
-// }
-
-// label {
- 
-//   @include mobilebodycopy();
-//   font-weight: 600;
-//   @include tablet{
-
-//   }
-// }
-// input[type="text"] {
-//   @include mobilebodycopy();
-//   font-weight: 700;
-//   width: 100%;
-//   height: 2.95rem;
-//   border-radius: 0.25rem;
-//   border: 0.063rem solid $mercury;
-//   padding: 0.75rem;
-//   margin-bottom: $margin * 1.4;
-  
-//   background-color: $Alabaster;
-//   font-weight: 400;
-//   @include tablet{
-//     @include bodycopy();
-//     height: 4.5rem;
-//     padding: 2rem;
-//   }
-// }
-// input[type="text"]:active {
-//   border: 0.063rem solid $mercury;
-// }
-// input:focus{
-//   outline: none;
-// }
-// textarea {
-//   @include mobilebodycopy();
-//   display: block;
-//   width: 100%;
-//   height: 150px;
-//   font-weight: 400;
-//   color: $bandsite-darkblac;
-//   border-radius: 0.25rem;
-//   border: 0.063rem solid $mercury;
-//   padding: $padding*0.55;
-//   margin-bottom: $margin * 0.25;
-//   margin-top: $margin*0.2;
-//   background-color: $Alabaster;
-//   outline-style: none;
-//   overflow: hidden;
-//   resize: none;
-//   @include tablet{
-//     padding: $padding*.99;
-//   }
-// }
-// .avatar {
-//   border: 0.063rem solid $mercury;
-//   background-color: $mercury;
-//   border-radius: 50%;
-//   width: 30px;
-//   height: 30px;
-//   background-image: url(../assets/images/Mohan-muruge.jpg);
-//   background-size: cover;
-//   padding: $padding * 1.4;
-//   margin-top: $margin*1.2;
-//   @include tablet{
-//     padding: $padding * 2.4;
-//     margin-top: $margin *1.2;
-//   }
-//   @include desktop{
-//     padding: $padding * 1.8;
-//     margin-top: $margin *1.2;
-//   }
-// }
-
-// .main-btn{
-//   width: 100%;
-//   margin-bottom: $margin*1;
-//   @include tablet{
-//     display: flex;
-//     width: 100%;
-//    margin-bottom: $margin*2;
-//     justify-content: flex-end;
-//   }
-// }
-// .button-container{
- 
-//   @include tablet{
-//     display: flex;
-//     justify-content: flex-end;
-//   width: 30%;
-//   padding: 0;
-//   margin: 0;
-//   }
-//   @include tablet{
-//     width: 30%;
-//   }
-// }
-
-
-
-// button{
-//   background-color: $bandsite-black;
-//   color: $mercury;
-//   display: block;
-//   width: 100%;
-//   height: 2.5rem;
-//   border-radius: 4px;
-//   margin-top: 25px;
-//   font-weight: bold;
-//   @include tablet{
-//     height: 2.5rem;
-//     padding: 0 $padding*1.5;
-//     @include bodycopy();
-//     font-weight: 700;
-//   }
-  
-// }
-// button:active{
-//   color: $white;
-// }
-// button:hover{
-//   color: $white;
-// }
-// .comment-storage {
-//   width: 100%;
-//   margin-right: 6rem;
-
-
-// }
-
-// .comment-section {
-//   @include mobilebodycopy;
-// }
-// .data-intro {
-//   display: flex;
-//   border-bottom: 1px solid $mercury;
-//   border-top: 1px solid $mercury;;
-//   padding-top: $padding;
-//   @include tablet{
-
-//   }
-//   @include desktop{
-   
-//   }
-// }
-// .new-avatar {
-//   border: 0.063rem solid $mercury;
-//   background-color: $mercury;
-//   border-radius: 50%;
-//   width: 36px;
-//   height: 36px;
-//   background-image: url();
-//   background-size: cover;
-//   padding: $padding * 1.2;
-//   margin-top: $margin * 0.5;
-
-//   @include tablet{
-//     padding: $padding * 2.4;
-//     margin-top: $margin *0.5;
-
-//   }
-//   @include desktop{
-//     padding: $padding * 1.8;
-//     margin-top: $margin *0.5;
-//   }
-// }
-// .only-data {
-  
-//   padding-left: 1rem;
-//   @include tablet{
-//     margin-left: $margin;
-//     margin-bottom: $margin;
-//     width: 100%;
-//     padding: 0;
-//   }
-// }
-// .data-x {
-//   display: flex;
-//   justify-content: space-between;
-//   @include tablet{
-//     width: 100%;
-//     justify-content: space-between;
-//   }
-// }
-// .data__text{
-//   padding-bottom: $padding*1;
-//   @include tablet{
-// padding-left: 0;
-// text-align: justify;
-//   padding-bottom: $padding*2;
-//   width: 100%;
-//   }
-// }
-// .data__name { 
-//   padding-bottom: $padding*.5;
-
-//   @include mobilesubheader;
-//   font-weight: 700;
-//   @include tablet{
-//     padding-left: 0;
-//     padding-bottom: $padding*.8
-//   }
-// }
-// .data__date {
-//   color: $silver;
-//   @include mobilesubheader;
-//   font-weight: 400;
-// }

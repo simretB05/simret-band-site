@@ -40,6 +40,13 @@
   font-size: 1.5rem;
   line-height: 2rem;
   font-family: "Avenir Bold";
+  
+}
+@mixin headermobfooter {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Bold";
+  color: $white;
 }
 @mixin sectionheadermob {
   font-size: 1.5rem;
@@ -63,6 +70,7 @@
   font-size: 0.813rem;
   line-height: 1.125rem;
   font-family: "Avenir Regular";
+  color: white;
 }
 @mixin desktabheaderd {
   font-size: 3.75rem;
@@ -84,10 +92,23 @@
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-family: "Avenir Regular";
+  
+}
+@mixin bodycopyds {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Bold";
+  
 }
 @mixin footercopyd {
   font-size: 0.875rem;
   line-height: 1.25rem;
+  font-family: "Avenir Regular";
+}
+@mixin footersubheadermob {
+   font-size: 1rem;
+  line-height: 1.375rem;
+  color: $white;
   font-family: "Avenir Regular";
 }
 @mixin copyright {

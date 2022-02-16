@@ -13,7 +13,7 @@
   }
   @include laptop-query {
     width: 100%;
-    height: 700px;
+    height: 681px;
   }
 
   &::before {
@@ -32,12 +32,11 @@
 }
 
 .hero__header {
-  @include  headermob();
+  @include headermob();
   font-weight: 600;
   position: relative;
   padding-left: $p-base;
   color: $white;
-
 
   @include tablet-query {
     @include desktabheaderd();
@@ -45,8 +44,8 @@
     font-weight: 600;
   }
   @include laptop-query {
-    @include  desktabheaderd();
-    padding-left: $p-base*3;
+    @include desktabheaderd();
+    padding-left: $p-base * 3;
     color: $white;
     font-weight: 600;
   }
@@ -60,20 +59,20 @@
     padding-top: $p-base * 3;
   }
   &__header {
-    @include  sectionheadermob();
+    @include sectionheadermob();
     padding: $p-base;
     padding-top: 0;
     font-weight: 600;
 
     @include tablet-query {
-      @include  sectionheaderd();
+      @include sectionheaderd();
       padding: 0 0 $p-base * 1.25 $p-base * 2.25;
-      font-weight: 600
+      font-weight: 600;
     }
     @include laptop-query {
-      @include  sectionheaderd();
+      @include sectionheaderd();
       padding: 0 0 $p-base $p-base * 8;
-       font-weight: 600;
+      font-weight: 600;
     }
   }
   &__image {
@@ -84,58 +83,80 @@
     @include tablet-query {
       display: block;
       width: 100%;
-      padding: 0 $p-base * 6 $p-base $p-base * 6;
+      padding: 0 $p-base * 5 $p-base $p-base * 5;
     }
-    @include laptop-query{
+      @include laptop-query {
+      width: 100%;
+      padding: 0 $p-base * 10 $p-base $p-base * 10;
+    }
+    @include laptop-l-query {
       width: 100%;
       padding: 0 $p-base * 13 $p-base $p-base * 13;
     }
   }
- &__copy {
+  &__copy {
     width: 100%;
-    @include  subheadermob();
+    @include subheadermob();
     text-align: justify;
     padding: $p-base;
     letter-spacing: 0.02rem;
 
     @include tablet-query {
-      @include bodycopyd();
+      @include bodycopyds();
       width: 100%;
-      padding: 0 $p-base * 6 $p-base $p-base * 6;
-      font-weight: 700;
-      font-size: 1.2rem;
-      line-height: 1.475rem;
+      padding: 0 $p-base * 5 $p-base $p-base * 5;
+      font-weight: 900;
+      font-size: 1.19rem;
+      line-height: 1.675rem;
       font-style: normal;
       letter-spacing: 1px;
+      justify-content: center;
     }
     @include laptop-query {
-      @include bodycopyd();
-      width: 84%;
-      padding: 0 $p-base * 13 0 $p-base * 13;
+      @include bodycopyds();
+      width: 81%;
+      padding: 0 $p-base * 7 0 $p-base * 10;
       font-weight: 700;
-      font-size: 1.2rem;
+      font-size: 1rem;
+      font-style: normal;
+      letter-spacing: 0.89px;
+    }
+       @include laptop-l-query {
+      @include bodycopyds();
+      width: 81%;
+      padding: 0 $p-base * 8 0 $p-base * 13;
+      font-weight: 700;
+      font-size: 1.1rem;
       font-style: normal;
       letter-spacing: 0.89px;
     }
   }
   &__copy__refrence {
-    @include   subheadermob();
+    @include subheadermob();
     padding: 0 $p-base * 1.2 $p-base * 2 $p-base;
     letter-spacing: 0.025rem;
     font-weight: 600;
 
     @include tablet-query {
-      @include bodycopyd();
-      width: 70%;
-      font-weight: 600;
-      font-size: 0.92rem;
+      @include bodycopyds();
+      width: 74%;
+
+      font-size: 1rem;
       padding: 0 $p-base * 6 $p-base $p-base * 5;
     }
     @include laptop-query {
-      @include bodycopyd();
-      padding: $p-base* 1.5 $p-base * 13 0 $p-base * 13;
+      @include bodycopyds();
+      padding: $p-base * 1.5 $p-base * 3 0 $p-base * 10;
       font-weight: 700;
-      font-size: 0.87rem;
+      font-size: 1rem;
+      font-style: normal;
+      letter-spacing: 0.89px;
+    }
+      @include laptop-l-query {
+      @include bodycopyds();
+      padding: $p-base * 1.5 $p-base * 8 0 $p-base * 13;
+      font-weight: 700;
+      font-size: 1.1rem;
       font-style: normal;
       letter-spacing: 0.89px;
     }
@@ -144,16 +165,19 @@
 
 .about__subheader {
   padding-left: $p-base;
-  @include  subheadermob();
-  
+  @include subheadermob();
+
   @include tablet-query {
     @include subheaderd();
-    padding: $p-base $p-base 0 $p-base* 5;
-    
+    padding: $p-base $p-base 0 $p-base * 5;
   }
   @include laptop-query {
     @include subheaderd();
-    padding: $p-base*3 $p-base 0 $p-base * 13;
+    padding: $p-base * 3 $p-base 0 $p-base * 10;
+  }
+    @include laptop-l-query {
+    @include subheaderd();
+    padding: $p-base * 3 $p-base 0 $p-base * 13;
   }
 }
 
@@ -186,11 +210,18 @@
       width: 50%;
       padding: 1rem;
     }
-    @include laptop-query{
+    @include laptop-query {
       @include bodycopyd();
-      width: 50%;
+      width: 68%;
       display: flex;
-      padding: 1rem 1rem 1rem 8.99rem;
+      padding: 1rem 0rem 1rem 5.99rem;
+      @include bodycopyd();
+    }
+    @include laptop-l-query {
+      @include bodycopyd();
+      width: 46%;
+      display: flex;
+      padding: 1rem 1rem 1rem 6.99rem;
       @include bodycopyd();
     }
   }
@@ -200,16 +231,21 @@
     padding: $p-base * 1.5 $p-base * 1.3 0 0;
     font-size: 1rem;
     line-height: 1.5rem;
-      padding: 1.5rem 1rem 0 0;
+    padding: 1.5rem 1rem 0 0;
     @include tablet-query {
-      @include bodycopymob();
+      @include bodycopyd();
       width: 50%;
       padding: $p-base;
     }
     @include laptop-query {
       @include bodycopyd();
-      width: 50%;
-      padding: $p-base $p-base * 9.6 $p-base 0;
+      width: 53%;
+      // padding: $p-base $p-base * 9.6 $p-base*1.5 $p-base*4;
+    }
+    @include laptop-l-query {
+      @include bodycopyd();
+      width: 48%;
+      padding: $p-base $p-base * 9.6 $p-base * 1.5 $p-base * 4;
     }
   }
 }
