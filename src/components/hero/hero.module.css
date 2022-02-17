@@ -45,7 +45,7 @@ body {
 @media screen and (min-width: 1024px) {
   .hero {
     width: 100%;
-    height: 700px;
+    height: 681px;
   }
 }
 .hero::before {
@@ -139,10 +139,16 @@ body {
   .about__image {
     display: block;
     width: 100%;
-    padding: 0 6rem 1rem 6rem;
+    padding: 0 5rem 1rem 5rem;
   }
 }
 @media screen and (min-width: 1024px) {
+  .about__image {
+    width: 100%;
+    padding: 0 10rem 1rem 10rem;
+  }
+}
+@media screen and (min-width: 1440px) {
   .about__image {
     width: 100%;
     padding: 0 13rem 1rem 13rem;
@@ -161,25 +167,39 @@ body {
   .about__copy {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-family: "Avenir Regular";
+    font-family: "Avenir Bold";
     width: 100%;
-    padding: 0 6rem 1rem 6rem;
-    font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.475rem;
+    padding: 0 5rem 1rem 5rem;
+    font-weight: 900;
+    font-size: 1.19rem;
+    line-height: 1.675rem;
     font-style: normal;
     letter-spacing: 1px;
+    justify-content: center;
   }
 }
 @media screen and (min-width: 1024px) {
   .about__copy {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-family: "Avenir Regular";
-    width: 84%;
-    padding: 0 13rem 0 13rem;
+    font-family: "Avenir Bold";
+    width: 81%;
+    padding: 0 7rem 0 10rem;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    font-style: normal;
+    letter-spacing: 0.89px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about__copy {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Bold";
+    width: 81%;
+    padding: 0 8rem 0 13rem;
+    font-weight: 700;
+    font-size: 1.1rem;
     font-style: normal;
     letter-spacing: 0.89px;
   }
@@ -196,10 +216,9 @@ body {
   .about__copy__refrence {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-family: "Avenir Regular";
-    width: 70%;
-    font-weight: 600;
-    font-size: 0.92rem;
+    font-family: "Avenir Bold";
+    width: 74%;
+    font-size: 1rem;
     padding: 0 6rem 1rem 5rem;
   }
 }
@@ -207,10 +226,22 @@ body {
   .about__copy__refrence {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-family: "Avenir Regular";
-    padding: 1.5rem 13rem 0 13rem;
+    font-family: "Avenir Bold";
+    padding: 1.5rem 3rem 0 10rem;
     font-weight: 700;
-    font-size: 0.87rem;
+    font-size: 1rem;
+    font-style: normal;
+    letter-spacing: 0.89px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .about__copy__refrence {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Bold";
+    padding: 1.5rem 8rem 0 13rem;
+    font-weight: 700;
+    font-size: 1.1rem;
     font-style: normal;
     letter-spacing: 0.89px;
   }
@@ -231,6 +262,14 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .about__subheader {
+    font-weight: 1.5rem;
+    line-height: 2rem;
+    font-family: "Avenir Bold";
+    padding: 3rem 1rem 0 10rem;
+  }
+}
+@media screen and (min-width: 1440px) {
   .about__subheader {
     font-weight: 1.5rem;
     line-height: 2rem;
@@ -284,9 +323,22 @@ body {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir Regular";
-    width: 50%;
+    width: 68%;
     display: flex;
-    padding: 1rem 1rem 1rem 8.99rem;
+    padding: 1rem 0rem 1rem 5.99rem;
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+  }
+}
+@media screen and (min-width: 1440px) {
+  .description__copy__left {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    width: 46%;
+    display: flex;
+    padding: 1rem 1rem 1rem 6.99rem;
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir Regular";
@@ -304,9 +356,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   .description__copy__right {
-    font-size: 1rem;
-    line-height: 1.125rem;
-    font-family: "Avenir Demi";
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
     width: 50%;
     padding: 1rem;
   }
@@ -316,8 +368,16 @@ body {
     font-size: 0.875rem;
     line-height: 1.375rem;
     font-family: "Avenir Regular";
-    width: 50%;
-    padding: 1rem 9.6rem 1rem 0;
+    width: 53%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .description__copy__right {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: "Avenir Regular";
+    width: 48%;
+    padding: 1rem 9.6rem 1.5rem 4rem;
   }
 }
 

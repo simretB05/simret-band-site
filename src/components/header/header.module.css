@@ -36,73 +36,67 @@ body {
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .header {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-items: center;
     padding: 1rem 3rem;
   }
 }
 
 .navbar {
   width: 100%;
-  padding-top: 1rem;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .navbar {
-    padding: 0;
-    width: 100%;
+    padding-left: 2rem;
   }
 }
 .navbar__list {
-  list-style: none;
-  display: flex;
-  justify-items: center;
-  align-content: center;
   padding: 0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .navbar__list {
-    padding: 0;
+    display: flex;
+    justify-items: center;
+    align-items: center;
   }
 }
 .navbar__list__item__bio {
   width: 50%;
-  font-style: "Avenir Bold";
+  padding: 1rem 0 1rem 0;
+  color: #ffffff;
   text-align: center;
-  color: #afafaf;
 }
 .navbar__list__item__bio:hover {
   content: "";
+  text-align: center;
+  color: #fafafa;
   padding-bottom: 1.5rem;
   border-bottom: 0.3rem solid #ffffff;
-  color: #fafafa;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
   .navbar__list__item__bio {
     width: 18%;
+  }
+  .navbar__list__item__bio:hover {
+    content: "";
+    text-align: center;
+    color: #fafafa;
+    padding-bottom: 2.5rem;
+    border-bottom: 0.3rem solid #ffffff;
   }
 }
 .navbar__list__item__show {
   width: 50%;
+  color: #ffffff;
+  padding: 1rem 0 1rem 0;
   text-align: center;
-  font-style: "Avenir Bold";
-  color: #afafaf;
 }
 .navbar__list__item__show:hover {
-  content: "";
-  text-align: center;
-  color: #fafafa;
-  padding-bottom: 1.5rem;
-  border-bottom: 0.3rem solid #ffffff;
-}
-@media screen and (min-width: 1024px) {
-  .navbar__list__item__show {
-    width: 18%;
-  }
-}
-@media screen and (min-width: 1440px) {
-  .navbar__list__item__show {
-    width: 18%;
-  }
+  border-bottom: 3px solid #ffffff;
 }/*# sourceMappingURL=header.module.css.map */

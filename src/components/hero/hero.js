@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "../hero/hero.module.scss";
+import Form from "../form/form";
 function Hero() {
   return (
     <div>
@@ -99,6 +100,7 @@ function Hero() {
             alt="gallery image9"
           />
         </section>
+
         {/*
       <section>
         <h2 className={classes.conv__title}>Join the Conversation</h2>
@@ -133,6 +135,7 @@ function Hero() {
           <div id="comment-storage"></div>
         </div> */}
       </div>
+      <Form/>
     </div>
   );
 }

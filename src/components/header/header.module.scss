@@ -1,6 +1,5 @@
 @import "../../styles/styles.scss";
 
-
 .header{
     background-color:$bandsite-black;
     padding-top: $p-base;
@@ -10,17 +9,20 @@
     align-items: center;
 
    @include tablet-query{
-
+    padding:0 $p-base*2 ;
     flex-direction: row;
     justify-items: center;
-    padding: $p-base $p-base*3;
+    // padding: $p-base $p-base*3;
     
+   }
+   @include laptop-query{
+       padding: 0$p-base*2;
    }
 }
 .navbar{
     width:100% ;
     @include tablet-query{
-padding-left: $p-base*2;
+padding-left: $p-base*4;
 
   }
     &__list{
@@ -30,9 +32,10 @@ padding-left: $p-base*2;
         align-items: center;
         list-style: none;
         @include tablet-query{
+            width: 23%;
             display: flex;
-            justify-items: center;
             align-items: center;
+            
         }
     
     &__item__bio{
@@ -44,17 +47,16 @@ text-align: center;
     content: "";
     text-align: center;
     color:$Alabaster;
-     padding-bottom: 1.5rem;
     border-bottom: 0.3rem solid $white;
  
 }
   @include tablet-query{
-        width: 18%;
+        
         &:hover{
             content: "";
+            width: 60%;
     text-align: center;
     color:$Alabaster;
-     padding-bottom: 2.5rem;
     border-bottom: 0.3rem solid $white;
         }
    
@@ -70,9 +72,16 @@ text-align: center;
     border-bottom: 3px solid $white;
     
 }
+  @include tablet-query{
+        width: 8%;
+        &:hover{
+            content: "";
+            width: 8%;
+    text-align: center;
+    color:$Alabaster;
+    border-bottom: 0.3rem solid $white;
+        }
     }
-
 }
 }
-
-
+}
