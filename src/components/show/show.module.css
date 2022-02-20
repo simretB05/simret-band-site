@@ -28,47 +28,62 @@ body {
   font-family: "Avenir Demi";
 }
 
-.header {
-  background-color: #323232;
-  padding-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 90px;
+.show {
+  padding: 1rem 1rem;
+}
+
+.container {
+  padding: 1rem 0;
 }
 @media screen and (min-width: 768px) {
-  .header {
-    padding: 0 2rem;
-    flex-direction: row;
-    justify-items: center;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .header {
-    padding: 0 2rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
-.navbar {
-  width: 100%;
+.list {
+  padding: 1rem 0;
 }
 @media screen and (min-width: 768px) {
-  .navbar {
-    padding-left: 4rem;
+  .list {
+    width: 600px;
+    display: flex;
   }
 }
-.navbar__list {
-  padding: 0;
-  display: flex;
-  justify-content: start;
-  align-items: center;
+@media screen and (min-width: 1024px) {
+  .list {
+    width: 900px;
+    display: flex;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .list {
+    width: 900px;
+    display: flex;
+  }
+}
+.list__title__dates {
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Demi";
+}
+.list__item {
   list-style: none;
 }
+
+.button {
+  color: #e1e1e1;
+  display: block;
+  width: 100%;
+  height: 2.5rem;
+  border-radius: 4px;
+  margin-top: 25px;
+  font-weight: bold;
+}
 @media screen and (min-width: 768px) {
-  .navbar__list {
-    width: 23%;
-    display: flex;
-    align-items: center;
+  .button {
+    width: 30%;
   }
-}/*# sourceMappingURL=header.module.css.map */
+}/*# sourceMappingURL=show.module.css.map */

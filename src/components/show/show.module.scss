@@ -1,0 +1,59 @@
+@import "../../styles/styles.scss";
+
+.show{
+    padding:  1rem  1rem;
+}
+.container{
+    padding: 1rem 0;
+    @include tablet-query{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.list{
+    padding: 1rem 0;
+    @include tablet-query{
+        width: 600px;
+        display: flex;
+    }
+     @include laptop-query{
+        width: 900px;
+        display: flex;
+    }
+     @include laptop-query{
+        width: 900px;
+        display: flex;
+    }
+&__title__dates{
+list-style: none;
+}
+&__title__date:nth-child(2){
+display: none;
+list-style: none;
+@include bodycopymob()
+}
+&__item{
+    list-style: none;
+}
+&__title__venue{
+    @include bodycopymob()
+    list-style: none;
+
+}
+&__title__location{
+    list-style: none;
+}
+}
+.button{
+    color: #e1e1e1;
+    display: block;
+    width: 100%;
+    height: 2.5rem;
+    border-radius: 4px;
+    margin-top: 25px;
+    font-weight: bold;
+    @include tablet-query{
+        width: 30%;
+
+    }
+}
