@@ -4,9 +4,9 @@ import Form from "../form/form";
 function Hero() {
   return (
     <div>
-      <section className={classes.hero}>
+      <div className={classes.hero}>
         <h1 className={classes.hero__header}>The Bees Knees</h1>
-      </section>
+      </div>
       <div className={classes.about}>
         <h2 className={classes.about__header}>About the Musicians</h2>
         <img
@@ -103,39 +103,10 @@ function Hero() {
 
         {/*
       <section>
-        <h2 className={classes.conv__title}>Join the Conversation</h2>
-        <div className={classes.conv__container}>
-          <div className={classes.form__container}>
-            <div className={classes.avatar}></div>
-
-            <form className={classes.form}>
-              <label for="name">NAME</label>
-              <input
-                type="text"
-                id="name"
-                name="Name"
-                placeholder="Enter your Name"
-              ></input>
-              <label for="name">COMMENT</label>
-              <textarea
-                name="COMMENT"
-                id="comment"
-                placeholder="Add a new comment"
-              ></textarea>
-
-              <div class="main-btn">
-                <div class="button-container">
-                  <button id="submit" type="submit">
-                    COMMENT
-                  </button>
-                </div>
-              </div>
-            </form>
-          </div>
-          <div id="comment-storage"></div>
+        
         </div> */}
       </div>
-      <Form/>
+      <Form />
     </div>
   );
 }

@@ -36,7 +36,7 @@ list-style: none;
     list-style: none;
 }
 &__title__venue{
-    @include bodycopymob()
+    @include bodycopymob();
     list-style: none;
 
 }

@@ -65,11 +65,24 @@ body {
 }
 .list__title__dates {
   list-style: none;
+}
+.list__title__date:nth-child(2) {
+  display: none;
+  list-style: none;
   font-size: 1rem;
   line-height: 1.125rem;
   font-family: "Avenir Demi";
 }
 .list__item {
+  list-style: none;
+}
+.list__title__venue {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-family: "Avenir Demi";
+  list-style: none;
+}
+.list__title__location {
   list-style: none;
 }
 
@@ -86,4 +99,4 @@ body {
   .button {
     width: 30%;
   }
-}/*# sourceMappingURL=show.module.css.map */
+}/*# sourceMappingURL=Tickets.module.css.map */

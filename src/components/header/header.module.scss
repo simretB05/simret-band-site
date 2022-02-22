@@ -1,5 +1,7 @@
 @import "../../styles/styles.scss";
 
+
+
 .header{
     background-color:$bandsite-black;
     padding-top: $p-base;
@@ -7,83 +9,110 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 90px;
+    height: 100px;
 
    @include tablet-query{
-    padding:0 $p-base*2 ;
+    padding:0 $p-base*2.5 ;
     flex-direction: row;
     justify-items: center;
-    // padding: $p-base $p-base*3;
+     height: 70px;
     
    }
    @include laptop-query{
-    padding: 0$p-base*2;
+    padding: 0$p-base*3;
+     height: 70px;
+
    }
 }
-
 .navbar{
     width:100% ;
     @include tablet-query{
-    padding-left: $p-base*4;
+        
+
     }
-    &__list{
-    padding:0;
+&__list{
+    width: 100%;
     display: flex;
-    justify-content:start;
+    padding: 0;
+    justify-content:space-around;
     align-items: center;
     list-style: none;
     @include tablet-query{
-    width: 23%;
-    display: flex;
+        margin: 0;
+    padding-left: $p-base*3;
+    width: 40%;
     align-items: center;
-            
-        }
+    }
+    @include laptop-query{
+         width: 30%;
+    }
+      @include laptop-l-query{
+         width: 20%;
+    }
+    }
+&__list__bio__link{
+    margin: 0;
+    width: 50%;
+    text-decoration: none;
+    &:hover{
+    color: $white;
+    }
+    @include tablet-query{
+        width: 39%;
+    }
+     
+    }
+&__list__item__bio{
+
+    text-align: center;
+       color: $mercury;
+       &:hover{
+    content: "";
+    @include subheadermob();
+    display: block;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 0.2rem solid $white;
+    color:$white
+    
+       }
+        @include tablet-query{
+            &:hover{
+    padding: $p-base*1.39 0;
     }
 }
-//     &__item__bio{
-// width: 50%;
-// padding: $p-base 0 $p-base 0;
-// color: $white;
-// text-align: center;
-// // &:hover{
-// //     content: "";
-// //     text-align: center;
-// //     color:$Alabaster;
-// //     border-bottom: 0.3rem solid $white;
- 
-// // }
-//   @include tablet-query{
-        
-//     //     &:hover{
-//     //         content: "";
-//     //         width: 60%;
-//     // text-align: center;
-//     // color:$Alabaster;
-//     // border-bottom: 0.3rem solid $white;
-//     //     }
-   
-
-//     }
-//     }
-// &__item__show{
-// // width: 50%;
-// // color: $white;
-// // padding: $p-base 0 $p-base 0;
-// // text-align: center;
-// // &:hover{
-// //     border-bottom: 3px solid $white;
-    
-// // }
-//   @include tablet-query{
-//         width: 8%;
-//     //     &:hover{
-//     //         content: "";
-//     //         width: 8%;
-//     // text-align: center;
-//     // color:$Alabaster;
-//     // border-bottom: 0.3rem solid $white;
-//     //     }
-//     }
-// }
-// }
-// }
+    }
+    &__list__show__link{
+    margin: 0;
+    width: 50%;
+    text-decoration: none;
+    &:hover{
+    color: $white;
+    }
+      @include tablet-query{
+        width: 24%;
+    }
+        @include laptop-l-query{
+        width: 22%;
+    }
+    }
+&__list__item__show{
+    text-align: center;
+     padding: 1rem 0;
+    color: $mercury;
+    &:hover{
+    @include subheadermob();
+    color:$white;
+    content: "";
+    display: block;
+    text-align: center;
+    border-bottom: 0.2rem solid $white;
+  
+       }
+       @include tablet-query{
+           &:hover{
+                    padding: $p-base*1.39 0;
+           }
+       }
+    }
+}

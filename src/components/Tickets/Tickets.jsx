@@ -1,7 +1,8 @@
 import React from "react";
-import classes from "../show/show.module.scss";
+import Hero from "../hero/hero";
+import classes from "../Tickets/tickets.module.scss";
 
-function Show(props) {
+function Tickets(props) {
   const { product } = props;
   return (
     <div className={classes.show}>
@@ -10,18 +11,18 @@ function Show(props) {
       </div> */}
       <div className={classes.container}>
         <ul className={classes.list}>
-          <li className={classes.list__title__dates}>DATES</li>
+          {/* <li className={classes.list__title__dates}>DATES</li>
           <li className={classes.list__item}>{product.DATES}</li>
           <li className={classes.list__title__venue}>VENUE</li>
           <li className={classes.list__item}>{product.VENUE}</li>
           <li className={classes.list__title__location}>LOCATION</li>
-          <li className={classes.list__item}>{product.LOCATION}</li>
+          <li className={classes.list__item}>{product.LOCATION}</li> */}
         </ul>
         <button className={classes.button}>BUY TICKETS</button>
       </div>
-      <hr />
+      <hr className={classes.list__hr} />
     </div>
   );
 }
 
-export default Show;
+export default Tickets;

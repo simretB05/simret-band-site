@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "Avenir Regular";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Bold";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTProBold.ttf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Demi";
+  src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
+  font-weight: 700;
+  font-style: normal;
+}
+/***********************
+* MEDIA QUERIES
+************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: "Avenir Demi";
+}
+
+iframe {
+  position: relative;
+  top: -29px;
+  width: 100%;
+  padding: 20px;
+  height: 150px;
+  border: none;
+}
+@media screen and (min-width: 768px) {
+  iframe {
+    top: 35px;
+    width: 63%;
+    padding-left: 2.5rem;
+    height: 160px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  iframe {
+    top: -160px;
+    right: -540px;
+    width: 40%;
+    height: 180px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  iframe {
+    top: -216px;
+    right: -780px;
+    width: 37%;
+    height: 180px;
+  }
+}
+
+.main-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-wrap: wrap;
+}/*# sourceMappingURL=music.module.css.map */

@@ -1,0 +1,96 @@
+@import "../../styles/styles.scss";
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 287px;
+  align-items: center;
+  background-color: $bandsite-black;
+
+  @include tablet-query {
+    width: 100%;
+    height: 506px;
+  }
+  @include laptop-query {
+    width: 100%;
+    height: 637px;
+  }
+   @include laptop-l-query {
+    width: 100%;
+    height: 862px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-image: url(../../../public/assets/images/hero-shows.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position:center;
+    opacity: 0.5;
+  }
+  @include laptop-query{
+      background-position: center ;
+  }
+}
+.hero__subheader {
+  padding: $p-base*1 $p-base;
+  @include subheadermobshow();
+  position: relative;
+  color: $white;
+  @include tablet-query {
+    @include sectionheadermob();
+    font-weight: 600;
+    position: relative;
+    color: $white;
+    padding:$p-base*4 $p-base*2 $p-base;
+  }
+  @include laptop-query {
+      padding:$p-base*9 $p-base*6 0;
+    @include headerdesktopshow ();
+    font-weight: 600;
+    position: relative;
+    color: $white;
+  }
+  @include laptop-l-query{
+     @include subheaderdshow();
+    padding:$p-base*13 $p-base*7.2 $p-base*2;
+
+  }
+}
+.hero__header {
+  padding: $p-base;
+  position: absolute;
+  @include subheaderdshow();
+  line-height: 1.2;
+  font-weight: 600;
+  position: relative;
+  padding-top: $p-base;
+  color: $white;
+  width: 87%;
+  @include tablet-query {
+    @include  desktabheaderd();
+    padding: 0 $p-base*2 ;
+    font-weight: 600;
+    position: relative;
+    color: $white;
+    width: 80%;
+  }
+  @include laptop-query {
+    @include  headershow();
+    padding: 0 $p-base*6 ;
+    line-height: 4rem;
+    position: relative;
+    color: $white;
+    width: 60%;
+  }
+  @include laptop-l-query{
+       @include  desktabheaderdshow();
+    padding: 0 $p-base*7.2 ;
+ width: 60%;
+  }
+}
