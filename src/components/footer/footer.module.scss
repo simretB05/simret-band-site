@@ -2,19 +2,19 @@
 
 
 .footer__section{
- background-color: $bandsite-black;;
- padding: $p-base;
- @include tablet-query{
-     padding-left: $p-base*3.5;
-     padding-top: $p-base*2;
-    //  display: flex;
-    //  justify-content: space-between;
+    background-color: $bandsite-black;;
+    padding: $p-base;
+    margin-top:$m-base;
+    @include tablet-query{
+    padding-left: $p-base*3.5;
+    padding-top: $p-base*2;
+   
  }
- @include laptop-query{
-      padding-left: $p-base*6;
+    @include laptop-query{
+    padding-left: $p-base*6;
  }
- @include laptop-l-query{
-           padding-left: $p-base*7.2;
+    @include laptop-l-query{
+    padding-left: $p-base*7.2;
 
  }
 }
@@ -28,12 +28,12 @@
     
 &__header{
     padding: $p-base 0 $p-base 0;
-    @include headermobfooter()
+    @include headermobfooter();
 
 }
 &__container{
     display: flex;
-     width: 107px;
+    width: 107px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,56 +45,54 @@
 }
 .card__main__container{
     @include tablet-query{
-        display: flex;
+    display: flex;
         
     }
 }
 .card{
-    @include footercopymob()
+    @include footercopymob();
 }
 .card__info{
     padding-bottom: $p-base;
     padding-top: $p-base;
 
 &__name{
-@include footercopymob()
-@include tablet-query{
-    @include footersubheadermob()
+   @include footercopymob();
+   @include tablet-query{
+   @include footersubheadermob();
 }
 }
 &__position{
-
-@include footersubheadermob()
-@include tablet-query{
-    @include footercopymob()
+    @include footersubheadermob();
+    @include tablet-query{
+    @include footercopymob();
 }
 
 }
 }
 .card__address{
-        padding-bottom: $p-base;
+    padding-bottom: $p-base;
 
 }
 .info__address__street{
-
-      @include footersubheadermob()
-      @include tablet-query{
-    @include footercopymob()
+    @include footersubheadermob();
+    @include tablet-query{
+    @include footercopymob();
 }
     }
 .info__address__city{
     
-      @include footersubheadermob()
-      @include tablet-query{
-    @include footercopymob()
+    @include footersubheadermob();
+    @include tablet-query{
+    @include footercopymob();
 }
 }
 .card__info__emailaddress{
             padding-top: $p-base;
 
-      @include footersubheadermob()
+    @include footersubheadermob();
     @include tablet-query{
-    @include footercopymob()
+    @include footercopymob();
      padding-bottom: $p-base;
     padding-top: $p-base;
 
@@ -105,53 +103,49 @@
 
 }
 .ndcard__info{
-    padding-bottom: $p-base;
+padding-bottom: $p-base;
 padding-top: $p-base;
-@include footersubheadermob()
-    @include tablet-query{
+   @include footersubheadermob();
+   @include tablet-query{
 padding-bottom: $p-base;
 padding-top: $p-base;
 padding-left: $p-base*3;
     }
 &__position{
-        // padding-bottom: $p-base;
-
-    @include subheadermob()
-@include tablet-query{
-    @include footercopymob()
+   @include subheadermob();
+   @include tablet-query{
+   @include footercopymob();
 }
 }
 &__name{
-@include footersubheadermob()
-@include tablet-query{
-    @include footercopymob()
+   @include footersubheadermob();
+   @include tablet-query{
+   @include footercopymob()
 }
 }
 &__location{
     padding-bottom: $p-base;
-
-@include footersubheadermob()
-@include tablet-query{
-    @include footercopymob()
+   @include footersubheadermob();
+   @include tablet-query{
+   @include footercopymob();
 }
 }
 &__position{
-@include footersubheadermob()
-    @include tablet-query{
+   @include footersubheadermob();
+   @include tablet-query{
     }
 }
 &__email{
-    @include footersubheadermob()
+    @include footersubheadermob();
 
     @include tablet-query{
 
-      @include footercopymob()
+    @include footercopymob();
     }
 }
 }
 .rdcard__container{
-        @include footersubheadermob()
-
+    @include footersubheadermob();
     @include tablet-query{
 padding-left: 4rem;
     }
@@ -159,59 +153,57 @@ padding-left: 4rem;
 .rdcard__info{
     padding-bottom: $p-base;
     padding-top: $p-base;
-    @include footercopymob()
+    @include footercopymob();
 &__position{
-    @include footersubheadermob()
+    @include footersubheadermob();
 
-    @include footercopymob()
+    @include footercopymob();
 }
 &__name{
     @include footersubheadermob()
 }
 &__city{
-        @include footersubheadermob()
+    @include footersubheadermob();
 
     @include tablet-query{
-@include footercopymob()
+   @include footercopymob();
     }
 
 }
 &__email{
-       @include footercopymob()
+    @include footercopymob();
          padding-top: $p-base;
     @include tablet-query{
 
-      @include footercopymob()
+    @include footercopymob();
     padding-top: $p-base;
     }
 }
 &__emailaddress{
-        @include footersubheadermob()
-
+    @include footersubheadermob();
     padding-bottom: $p-base*4;
 }
 }
 .copyright__text{
-    @include footercopymob()
-     padding-top: $p-base;
+    @include footercopymob();
+    padding-top: $p-base;
 }
 .bottom__logo{
     @include tablet-query{
         position: relative;
        top: -16.1rem;
        right: -35rem;
-
     }
       @include laptop-query{
         position: relative;
        top: -16.1rem;
-       right: -49rem;
+       right: -44.5rem;
 
     }
       @include laptop-l-query{
         position: relative;
        top: -16.1rem;
-       right: -69rem;
+       right: -67.4rem;
 
     }
 }

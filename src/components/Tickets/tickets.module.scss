@@ -1,59 +1,116 @@
 @import "../../styles/styles.scss";
 
-.show{
-    padding:  1rem  1rem;
-}
+
 .container{
-    padding: 1rem 0;
+    padding: 0 1rem ;
     @include tablet-query{
+        width: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        padding: 0 2.5rem;
+    }
+    @include laptop-query{
+    padding: 0  $p-base*2 0 $p-base*6;
+    width: 70%;
+    position: relative;
+    top: -68px;
+    right: -240px;
+    }
+       @include laptop-l-query{
+    padding: 0  $p-base*2 0 $p-base*12.2;
+    width: 70%;
+    position: relative;
+    top: -68px;
+    right: -340px;
     }
 }
 .list{
     padding: 1rem 0;
+    list-style: none;
     @include tablet-query{
-        width: 600px;
+        width: 90%;
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
     }
      @include laptop-query{
-        width: 900px;
-        display: flex;
+        width: 100%;
+        
     }
      @include laptop-query{
-        width: 900px;
+        width: 100%;
         display: flex;
     }
-&__title__dates{
-list-style: none;
+@include laptop-l-query{
+    width: 100%;
 }
-&__title__date:nth-child(2){
-display: none;
+&__title{
 list-style: none;
-@include bodycopymob()
+ @include bodycopyd();
+font-weight: 600;
+padding: .51rem 0;
+color: $silver;
+@include tablet-query{
+    padding: 0;
+    display: none;
+}
 }
 &__item{
-    list-style: none;
+list-style: none;
+@include subheadermob();
+color: $bandsite-black;
+@include tablet-query{
+width: 29%;
+margin-top: 1rem;
+padding: 0;
+@include bodycopyd();
 }
-&__title__venue{
-    @include bodycopymob();
-    list-style: none;
+@include laptop-query{
+width:100%;
+}
+@include laptop-l-query{
+        width: 80%;
 
 }
-&__title__location{
-    list-style: none;
+}
+&__hr{
+  width: 100%;
+  margin-top: 1rem;
+  height: 2px;
+  color: none;
+  background-color:$mercury;
+  border: none;
+@include tablet-query{
+  height: 2px;
+  color: none;
+  background-color: $mercury;
+  border: 1px;
+}
 }
 }
 .button{
-    color: #e1e1e1;
+    color: $mercury;
     display: block;
     width: 100%;
     height: 2.5rem;
     border-radius: 4px;
     margin-top: 25px;
     font-weight: bold;
+    &:hover{
+color: $white;
+    }
     @include tablet-query{
-        width: 30%;
+        width: 30%; 
+            margin-left: 1rem;
 
+         font-size: 1px;
+        @include bodycopyd();
+        margin-top: 1rem;
+
+    }
+    @include laptop-l-query{
+        width: 25%;
+        
     }
 }

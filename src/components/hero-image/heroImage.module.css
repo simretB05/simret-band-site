@@ -156,4 +156,39 @@ body {
     padding: 0 7.2rem;
     width: 60%;
   }
+}
+
+.shows {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-family: "Avenir Bold";
+  padding: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .shows {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-family: "Avenir Bold";
+  }
+}
+@media screen and (min-width: 1024px) {
+  .shows {
+    padding-left: 6rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .shows {
+    padding-left: 7.2rem;
+  }
+}
+.shows__list {
+  width: 50%;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+  font-family: "Avenir Regular";
+  font-weight: 600;
+  color: #afafaf;
 }/*# sourceMappingURL=heroImage.module.css.map */
