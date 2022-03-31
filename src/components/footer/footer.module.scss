@@ -2,7 +2,7 @@
 
 
 .footer__section{
-    background-color: $bandsite-black;;
+    background-color: $silver;
     padding: $p-base;
     margin-top:$m-base;
     @include tablet-query{
@@ -201,7 +201,7 @@ padding-left: 4rem;
 
     }
       @include laptop-l-query{
-        position: relative;
+    position: relative;
        top: -16.1rem;
        right: -67.4rem;
 
