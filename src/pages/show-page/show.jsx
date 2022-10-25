@@ -1,12 +1,12 @@
 import React from "react";
-import HeroImage from "../hero-image/HeroImage";
-import Tickets from "../Tickets/Tickets";
-import data from "../Data/data";
+import data from "../../components/Data/data";
+import HeroImage from "../../components/hero-image/HeroImage";
+import Tickets from "../../components/Tickets/Tickets";
 const { products } = data;
 
 function Show() {
   return (
-    <div>
+    <div className="content">
       <HeroImage />
       {products.map((x) => {
         return (

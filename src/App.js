@@ -1,20 +1,19 @@
 import "./styles/styles.scss";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import Biography from "./components/Biography-page/Biography";
-import Show from "./components/show-page/show";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SharedLayout from "./components/shearedLayout";
+import Show from "./pages/show-page/show";
+import Biography from "./pages/Biography-page/Biography";
 
 function App() {
   return (
     <div className="App">
       <Router>
-        <Header />
         <Routes>
-          <Route path="/Biography" exact element={<Biography />} />
-          <Route path="/Show" exact element={<Show />} />
+        <Route path="/" element={<SharedLayout />} >
+          <Route path="/" exact element={<Biography />} />
+            <Route path="/Show" exact element={<Show />} />
+            </Route>
         </Routes>
-        <Footer />
       </Router>
     </div>
   );

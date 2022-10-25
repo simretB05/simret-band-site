@@ -28,6 +28,16 @@ body {
   font-family: "Avenir Demi";
 }
 
+.content {
+  padding: 6.2rem 0 0 0;
+  min-height: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .content {
+    padding: 4.4rem 0 0 0;
+  }
+}
+
 .header {
   background-color: #323232;
   padding-top: 1rem;
@@ -36,6 +46,8 @@ body {
   justify-content: center;
   align-items: center;
   height: 100px;
+  width: 100%;
+  position: fixed;
 }
 @media screen and (min-width: 768px) {
   .header {

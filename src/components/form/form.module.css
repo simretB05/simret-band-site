@@ -28,6 +28,16 @@ body {
   font-family: "Avenir Demi";
 }
 
+.content {
+  padding: 6.2rem 0 0 0;
+  min-height: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .content {
+    padding: 4.4rem 0 0 0;
+  }
+}
+
 .form {
   background-color: #fafafa;
   padding: 1rem;
@@ -226,16 +236,21 @@ button:hover {
 
 .comment {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
   padding: 0;
   margin: 0;
 }
-.comment__container {
-  width: 100%;
-  margin: 2rem;
+.comment__main {
+  display: flex;
 }
-.comment__avatar {
+.comment__main__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.comment__main__avatar {
   border: 0.063rem solid #e1e1e1;
   background-color: #e1e1e1;
   border-radius: 50%;
@@ -243,14 +258,13 @@ button:hover {
   height: 40px;
   background-size: cover;
   padding: 1.4rem;
-  margin: 1rem;
 }
-.comment__list {
+.comment__main__list {
   display: flex;
   justify-content: space-between;
   list-style: none;
   padding: 1rem;
 }
-.comment__text {
+.comment__main__text {
   padding: 1rem;
 }/*# sourceMappingURL=form.module.css.map */

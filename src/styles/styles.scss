@@ -16,3 +16,12 @@ body{
     
 }
 
+.content{
+    padding: $p-base*6.2 0 0 0;
+    min-height: 100vw;
+    @include tablet-query{
+        padding: $p-base*4.4 0 0 0;
+
+    }
+
+  }

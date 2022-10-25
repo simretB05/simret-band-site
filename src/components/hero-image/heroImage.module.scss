@@ -6,6 +6,7 @@
   height: 287px;
   align-items: center;
   background-color: $bandsite-black;
+  z-index: -1;
 
   @include tablet-query {
     width: 100%;

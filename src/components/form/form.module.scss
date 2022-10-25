@@ -164,31 +164,36 @@ button:hover{
 }
 .comment{
  display: flex;
+ flex-direction: column;
     justify-content: center;
     align-content: center;
     padding: 0;
     margin: 0;
-  &__container{
-    width: 100%;
-     margin: 2rem;
-  }
-    &__avatar{
-       border: 0.063rem solid $mercury;
-  background-color: $mercury;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  background-size: cover;
-  padding: $p-base * 1.4;
-  margin: 1rem;
-    }
-    &__list{
+    &__main{
       display: flex;
-      justify-content: space-between;
-      list-style: none;
-      padding: 1rem;
-    }
-    &__text{
-      padding: 1rem;
-    }
+    
+      &__container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+        &__avatar{
+          border: 0.063rem solid $mercury;
+      background-color: $mercury;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      background-size: cover;
+      padding: $p-base * 1.4;
+        }
+        &__list{
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+          padding: 1rem;
+        }
+        &__text{
+          padding: 1rem;
+        }
+  }
   }

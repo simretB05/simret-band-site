@@ -4,6 +4,7 @@ import Form from "../form/form";
 function Hero() {
   return (
     <div>
+      <div className="content">
       <div className={classes.hero}>
         <h1 className={classes.hero__header}>The Bees Knees</h1>
       </div>
@@ -107,7 +108,8 @@ function Hero() {
         </div> */}
       </div>
       <Form />
-    </div>
+      </div>
+      </div>
   );
 }
 
