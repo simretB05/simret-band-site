@@ -10,7 +10,7 @@ function App() {
       <Router>
         <Routes>
         <Route path="/" element={<SharedLayout />} >
-          <Route path="/" exact element={<Biography />} />
+            <Route path="/" exact element={<Biography/>} />
             <Route path="/Show" exact element={<Show />} />
             </Route>
         </Routes>

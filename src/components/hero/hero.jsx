@@ -1,7 +1,18 @@
-import React from "react";
+import React,{useState} from "react";
 import classes from "../hero/hero.module.scss";
 import Form from "../form/form";
 function Hero() {
+    const current = new Date();
+
+  const [usersList, setUsersList] = useState([]);
+  const addUserHandler = (uName, uComment) => {
+    setUsersList((prevUsersList) => {
+      return [
+        ...prevUsersList,
+        { name: uName, comment: uComment, id: Math.random().toString(), date:`${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`},
+      ];
+    });
+  };
   return (
     <div>
       <div className="content">
@@ -107,7 +118,7 @@ function Hero() {
         
         </div> */}
       </div>
-      <Form />
+      <Form  users={usersList } onAddUser={addUserHandler} />
       </div>
       </div>
   );
