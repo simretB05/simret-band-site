@@ -1,18 +1,40 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import classes from "../hero/hero.module.scss";
 import Form from "../form/form";
 function Hero() {
-    const current = new Date();
+  const current = new Date();
+  const getLocalList = () => {
 
-  const [usersList, setUsersList] = useState([]);
+
+    const storedUserCommentInfo = localStorage.getItem('usersList');
+    // console.log(storedUserCommentInfo)
+    if (storedUserCommentInfo) {
+    return JSON.parse(localStorage.getItem('usersList'))
+    } else {
+      return [];
+  }
+
+}
+  const [usersList, setUsersList] = useState(getLocalList());
+  
+ 
+
+  useEffect(() => {
+    localStorage.setItem('usersList',JSON.stringify(usersList));
+   
+    
+  }, [usersList]);
+
   const addUserHandler = (uName, uComment) => {
-    setUsersList((prevUsersList) => {
+    setUsersList((usersList) => {
       return [
-        ...prevUsersList,
+        ...usersList,
         { name: uName, comment: uComment, id: Math.random().toString(), date:`${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`},
       ];
     });
   };
+
+
   return (
     <div>
       <div className="content">
@@ -118,7 +140,7 @@ function Hero() {
         
         </div> */}
       </div>
-      <Form  users={usersList } onAddUser={addUserHandler} />
+      <Form  Users={usersList } onAddUser={addUserHandler} />
       </div>
       </div>
   );

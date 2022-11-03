@@ -61,8 +61,8 @@ function Footer() {
                   <p className={classes.ndcard__info__location}>
                     US / South America / Japan
                   </p>
-                  <div class={classes.ndcard__info__email}>
-                    <p class={classes.ndcard__info__emailaddress}>
+                  <div className={classes.ndcard__info__email}>
+                    <p className={classes.ndcard__info__emailaddress}>
                       pearl.gregg@limitlessag.com
                     </p>
                   </div>

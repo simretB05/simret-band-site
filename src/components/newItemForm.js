@@ -3,11 +3,33 @@ import classes from "../components/form/form.module.scss"
 
 const NewItemForm = (props) => {
     const [enteredUsername, setEnteredUserName] = useState('');
+    const [namesValid, setNameIsValid] = useState();
+    const [commentIsValid, setCommentIsValid] = useState();
     const [enteredComment, setEnteredUserComment] = useState('');
     const [error, setError] = useState();
     
 
-    const addUserHandler = (event) => {
+
+ 
+  
+    const validateNameHandler = () => {
+        setNameIsValid(enteredUsername.includes('@') && enteredUsername.trim().length >=2);
+    
+    };
+    const userNameChangedHandler = (event) => {
+                validateNameHandler()
+
+        setEnteredUserName(event.target.value)
+    }
+    
+      const validateCommentHandler = () => {
+        setCommentIsValid(enteredComment.trim().length > 6);
+    };
+    const userCommentChangedHandler = (event) => {
+        validateCommentHandler()
+        setEnteredUserComment(event.target.value)
+    }
+      const addUserHandler = (event) => {
         event.preventDefault();
         if (enteredUsername.trim().length >=15|| enteredComment.trim().length <=6){
             setError({
@@ -21,24 +43,26 @@ const NewItemForm = (props) => {
         setEnteredUserComment('');
         setEnteredUserName('');
     }
-    const userNameChangedHandler = (event) => {
-        setEnteredUserName(event.target.value)
-    }
-    const userCommentChangedHandler = (event) => {
-        setEnteredUserComment(event.target.value)
-    }
   return (
     <form onSubmit={addUserHandler} className={classes.form}>
-    <label htmlFor="name">NAME</label>
-    <input
-        aria-label="name for comments"
-        type="text"
-        name="fname"
-        placeholder="Enter your Name"
-        onChange={userNameChangedHandler} 
-        value={enteredUsername}
-    >
-    </input>
+        <div
+          className={`${classes.form__control} ${
+            namesValid === false ? classes.form__invalid : ''
+          }`}
+        >
+            <label htmlFor="name">NAME</label>
+            <input
+                aria-label="name for comments"
+                type="text"
+                name="fname"
+                placeholder="Enter your Name"
+                  onChange={userNameChangedHandler} 
+                  onBlur={validateNameHandler}
+                value={enteredUsername}
+          />
+          
+          </div>
+
     <label htmlFor="name">COMMENT</label>
     <textarea
         aria-label="comments"

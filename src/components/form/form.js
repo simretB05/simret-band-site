@@ -2,7 +2,6 @@ import React from "react";
 import classes from "../form/form.module.scss";
 import NewItemForm from "../newItemForm";
 
-
 function Form(props) {
       
     
@@ -15,9 +14,9 @@ function Form(props) {
           <NewItemForm onAddUser={props.onAddUser } />
                     </div>
               <div className={classes.comment}>
-                  {props.users.map((data) => (
+                  {props.Users.map((data,index) => (
                   
-                        <div className={classes.comment__main}>
+                        <div className={classes.comment__main}key={index}>
                           <div className={classes.comment__main__avatar}>{data.img}</div>
                             <div className={classes.comment__main__container}>
                                 <ul className={classes.comment__main__list}>
@@ -27,14 +26,22 @@ function Form(props) {
                           
                                 <div className={classes.comment__main__text__container}>
                                     <textarea className={classes.comment__main__text__container__body}
-                                        ariaLabel="comments"
+                                        aria-label="comments"
                                         type="text"
                                         name="comment"
                                         placeholder="Add a new comment"
+                                        onChange={props.onAddUser}
                                         value={data.comment}
                                     >
-                                    </textarea>
-                                  
+                          </textarea>
+                          <div className={classes.formbtn}>
+                                <button className={classes.deletebtn}>
+                                  <img src="./assets/icons/icon-delete.svg" alt="delete button" />
+                                </button>
+                                <button className={classes.likebtn}>
+                                  <img src="./assets/icons/icon-like.svg" alt="delete button" />
+                                </button>
+                            </div>
                                   </div>
                             </div>
                          </div>

@@ -41,9 +41,16 @@ form {
   padding-left: $p-base * 0.6;
   width: 100%;
   font-weight: 600;
+  &__control{
+    margin: 1rem 0;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    background-color: red
+  }
   
 }
-input[type="text"] {
+.form__control input[type="text"] {
   @include bodycopymob();
   font-weight: 700;
   width: 100%;
@@ -52,7 +59,6 @@ input[type="text"] {
   border: 0.063rem solid $mercury;
   padding: 0.75rem;
   margin-bottom: $m-base * 1.4;
-
   background-color: $Alabaster;
   font-weight: 400;
   @include tablet-query{
@@ -61,11 +67,15 @@ input[type="text"] {
     padding: 2rem;
   }
 }
-input[type="text"]:active {
+.form__control input[type="text"]:active {
   border: 0.063rem solid $mercury;
 }
-input:focus{
+.form__control input:focus{
   outline: none;
+}
+.form__invalid input {
+  border-color: red;
+  background: #fbdada;
 }
 textarea {
   @include bodycopymob();
@@ -212,11 +222,32 @@ button:hover{
           width: 100%;
           border: none;
           margin: none;
-          padding: 1rem;
+          padding: 1rem;  
+          font-size: 0.91rem;
+          font-weight: 300;
+          text-align: justify;
+          color: rgb(110, 108, 108);
+          letter-spacing: 0.5px;
+          scroll-behavior:smooth;
+
         }
       }
   }
   }
 textarea{
   margin: 0;
+  overflow-y: scroll;
+  height: 100px;
+  resize:none;
+}
+.formbtn{
+  display: flex;
+}
+.deletebtn,.likebtn{
+  width: 19px;
+  background-color: transparent;
+  border: none;
+  text-align: start;
+  margin: 0;
+
 }
