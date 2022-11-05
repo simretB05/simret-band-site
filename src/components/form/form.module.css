@@ -303,6 +303,7 @@ button:hover {
   color: rgb(110, 108, 108);
   letter-spacing: 0.5px;
   scroll-behavior: smooth;
+  resize: none;
 }
 
 textarea {
@@ -322,4 +323,8 @@ textarea {
   border: none;
   text-align: start;
   margin: 0;
+}
+
+::-webkit-scrollbar {
+  background-color: transparent;
 }/*# sourceMappingURL=form.module.css.map */
