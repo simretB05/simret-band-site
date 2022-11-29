@@ -1,3 +1,4 @@
+/** @format */
 @font-face {
   font-family: "Avenir Regular";
   src: url(../../../public/assets/fonts/Alternative-files/AvenirNextLTPro.ttf);
@@ -317,7 +318,8 @@ textarea {
   display: flex;
 }
 
-.deletebtn, .likebtn {
+.deletebtn,
+.likebtn {
   width: 19px;
   background-color: transparent;
   border: none;
@@ -327,4 +329,15 @@ textarea {
 
 ::-webkit-scrollbar {
   background-color: transparent;
+}
+
+.likebtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likebtn p {
+  color: #afafaf;
 }/*# sourceMappingURL=form.module.css.map */

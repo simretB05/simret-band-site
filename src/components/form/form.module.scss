@@ -1,260 +1,259 @@
+/** @format */
+
 @import "../../styles/styles.scss";
 
-.form{
- background-color: $Alabaster;
- padding: $p-base;
-}
-.conv__container{
-    display: flex;
-}
-.conv__title{
-    @include subheaderd()
-}
-.conv__avator{
-   border-radius: 50%;
-  width: 44px;
-  height: 44px;
-    
+.form {
+	background-color: $Alabaster;
+	padding: $p-base;
 }
 .conv__container {
-  width: 100%;
-  display: flex;
-  padding:0 $p-base;
-  flex-direction: column;
-  @include tablet-query{
-    padding: 0 $p-base*4
-    
-  }
+	display: flex;
+}
+.conv__title {
+	@include subheaderd();
+}
+.conv__avator {
+	border-radius: 50%;
+	width: 44px;
+	height: 44px;
+}
+.conv__container {
+	width: 100%;
+	display: flex;
+	padding: 0 $p-base;
+	flex-direction: column;
+	@include tablet-query {
+		padding: 0 $p-base * 4;
+	}
 }
 .form__container {
-  width: 100%;
-  display: flex;
-  margin-top: $m-base;
-  @include tablet-query{
-
-  }
+	width: 100%;
+	display: flex;
+	margin-top: $m-base;
+	@include tablet-query {
+	}
 }
 form {
-  color: $silver;
-  margin-top: 0;
-  padding-top: 0;
-  padding-left: $p-base * 0.6;
-  width: 100%;
-  font-weight: 600;
-  &__control{
-    margin: 1rem 0;
-    display: flex;
-    align-items: stretch;
-    flex-direction: column;
-    background-color: red
-  }
-  
+	color: $silver;
+	margin-top: 0;
+	padding-top: 0;
+	padding-left: $p-base * 0.6;
+	width: 100%;
+	font-weight: 600;
+	&__control {
+		margin: 1rem 0;
+		display: flex;
+		align-items: stretch;
+		flex-direction: column;
+		background-color: red;
+	}
 }
 .form__control input[type="text"] {
-  @include bodycopymob();
-  font-weight: 700;
-  width: 100%;
-  height: 2.95rem;
-  border-radius: 0.25rem;
-  border: 0.063rem solid $mercury;
-  padding: 0.75rem;
-  margin-bottom: $m-base * 1.4;
-  background-color: $Alabaster;
-  font-weight: 400;
-  @include tablet-query{
-    @include bodycopymob();
-    height: 4.5rem;
-    padding: 2rem;
-  }
+	@include bodycopymob();
+	font-weight: 700;
+	width: 100%;
+	height: 2.95rem;
+	border-radius: 0.25rem;
+	border: 0.063rem solid $mercury;
+	padding: 0.75rem;
+	margin-bottom: $m-base * 1.4;
+	background-color: $Alabaster;
+	font-weight: 400;
+	@include tablet-query {
+		@include bodycopymob();
+		height: 4.5rem;
+		padding: 2rem;
+	}
 }
 .form__control input[type="text"]:active {
-  border: 0.063rem solid $mercury;
+	border: 0.063rem solid $mercury;
 }
-.form__control input:focus{
-  outline: none;
+.form__control input:focus {
+	outline: none;
 }
 .form__invalid input {
-  border-color: red;
-  background: #fbdada;
+	border-color: red;
+	background: #fbdada;
 }
 textarea {
-  @include bodycopymob();
-  display: block;
-  width: 100%;
-  height: 150px;
-  font-weight: 400;
-  color: $bandsite-darkblac;
-  border-radius: 0.25rem;
-  border: 0.063rem solid $mercury;
-  padding: $p-base*0.55;
-  margin-bottom: $m-base * 0.25;
-  margin-top: $m-base*0.2;
-  background-color: $Alabaster;
-  outline-style: none;
-  overflow: hidden;
-  resize: none;
-  @include tablet-query{
-    padding: $p-base*.99;
-  }
+	@include bodycopymob();
+	display: block;
+	width: 100%;
+	height: 150px;
+	font-weight: 400;
+	color: $bandsite-darkblac;
+	border-radius: 0.25rem;
+	border: 0.063rem solid $mercury;
+	padding: $p-base * 0.55;
+	margin-bottom: $m-base * 0.25;
+	margin-top: $m-base * 0.2;
+	background-color: $Alabaster;
+	outline-style: none;
+	overflow: hidden;
+	resize: none;
+	@include tablet-query {
+		padding: $p-base * 0.99;
+	}
 }
 .avatar {
-  border: 0.063rem solid $mercury;
-  background-color: $mercury;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  background-image: url(../../../public/assets/images/Mohan-muruge.jpg);
-  background-size: cover;
-  padding: $p-base * 1.4;
-  margin-top: $m-base*2.2;
-  @include tablet-query{
-    padding: $p-base * 2.4;
-    margin-top: $m-base *1.2;
-  }
-  @include laptop-query{
-    padding: $p-base * 1.8;
-    margin-top: $m-base *1.2;
-  }
+	border: 0.063rem solid $mercury;
+	background-color: $mercury;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	background-image: url(../../../public/assets/images/Mohan-muruge.jpg);
+	background-size: cover;
+	padding: $p-base * 1.4;
+	margin-top: $m-base * 2.2;
+	@include tablet-query {
+		padding: $p-base * 2.4;
+		margin-top: $m-base * 1.2;
+	}
+	@include laptop-query {
+		padding: $p-base * 1.8;
+		margin-top: $m-base * 1.2;
+	}
 }
-.main-btn{
-  width: 100%;
-  margin-bottom: $m-base*1;
-  @include tablet-query{
-    display: flex;
-    width: 100%;
-   margin-bottom: $m-base*2;
-    justify-content: flex-end;
-  }
+.main-btn {
+	width: 100%;
+	margin-bottom: $m-base * 1;
+	@include tablet-query {
+		display: flex;
+		width: 100%;
+		margin-bottom: $m-base * 2;
+		justify-content: flex-end;
+	}
 }
-.button-container{
-  @include tablet-query{
-    display: flex;
-    justify-content: flex-end;
-  width: 30%;
-  padding: 0;
-  margin: 0;
-  }
-  @include tablet-query{
-    width: 30%;
-  }
+.button-container {
+	@include tablet-query {
+		display: flex;
+		justify-content: flex-end;
+		width: 30%;
+		padding: 0;
+		margin: 0;
+	}
+	@include tablet-query {
+		width: 30%;
+	}
 }
 
-button{
-  background-color: $bandsite-black;
-  color: $mercury;
-  display: block;
-  width: 100%;
-  height: 2.5rem;
-  border-radius: 4px;
-  margin-top: 25px;
-  font-weight: bold;
-  @include tablet-query{
-    height: 2.5rem;
-    padding: 0 $p-base*1.5;
-    @include bodycopymob();
-    font-weight: 700;
-    width: 70%;
-  }
-  @include laptop-query{
-    width: 20%;
-  }
-  
+button {
+	background-color: $bandsite-black;
+	color: $mercury;
+	display: block;
+	width: 100%;
+	height: 2.5rem;
+	border-radius: 4px;
+	margin-top: 25px;
+	font-weight: bold;
+	@include tablet-query {
+		height: 2.5rem;
+		padding: 0 $p-base * 1.5;
+		@include bodycopymob();
+		font-weight: 700;
+		width: 70%;
+	}
+	@include laptop-query {
+		width: 20%;
+	}
 }
-button:active{
-  color: $white;
+button:active {
+	color: $white;
 }
-button:hover{
-  color: $white;
+button:hover {
+	color: $white;
 }
 .comment__storage {
-  width: 100%;
-  margin-right: 6rem;
-
-
+	width: 100%;
+	margin-right: 6rem;
 }
-.comment{
- display: flex;
- flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    &__main{
-      display: flex;
-      width: 100%;
-    
-      &__container{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-        &__avatar{
-          border: 0.063rem solid $mercury;
-      background-color: $mercury;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      background-size: cover;
-      padding: $p-base * 1.4;
-        }
-        &__list{
-          display: flex;
-          justify-content: space-between;
-          list-style: none;
-          padding: 1rem;
-          width: 100%;
-          &__name{
-            width: 100%;
+.comment {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	&__main {
+		display: flex;
+		width: 100%;
 
-          }
-          &__date{
-            width: 100%;
-    text-align: end;
-          }
-        }
-        &__text__container{
-          width: 100%;
-          margin: 0 auto;
-          margin: 0;
-        
-        &__body{
-          width: 100%;
-          border: none;
-          margin: none;
-          padding: 1rem;  
-          font-size: 0.91rem;
-          font-weight: 300;
-          text-align: justify;
-          color: rgb(110, 108, 108);
-          letter-spacing: 0.5px;
-          scroll-behavior:smooth;
-          resize:none;
-          
+		&__container {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+		&__avatar {
+			border: 0.063rem solid $mercury;
+			background-color: $mercury;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			background-size: cover;
+			padding: $p-base * 1.4;
+		}
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			list-style: none;
+			padding: 1rem;
+			width: 100%;
+			&__name {
+				width: 100%;
+			}
+			&__date {
+				width: 100%;
+				text-align: end;
+			}
+		}
+		&__text__container {
+			width: 100%;
+			margin: 0 auto;
+			margin: 0;
 
-        }
-      }
-  }
-  }
-textarea{
-  margin: 0;
-  overflow-y:scroll;
-  height: 100px;
-  resize:none;
-  
-
+			&__body {
+				width: 100%;
+				border: none;
+				margin: none;
+				padding: 1rem;
+				font-size: 0.91rem;
+				font-weight: 300;
+				text-align: justify;
+				color: rgb(110, 108, 108);
+				letter-spacing: 0.5px;
+				scroll-behavior: smooth;
+				resize: none;
+			}
+		}
+	}
 }
-.formbtn{
-  display: flex;
+textarea {
+	margin: 0;
+	overflow-y: scroll;
+	height: 100px;
+	resize: none;
 }
-.deletebtn,.likebtn{
-  width: 19px;
-  background-color: transparent;
-  border: none;
-  text-align: start;
-  margin: 0;
-
+.formbtn {
+	display: flex;
 }
-::-webkit-scrollbar{
-  background-color: transparent;
+.deletebtn,
+.likebtn {
+	width: 19px;
+	background-color: transparent;
+	border: none;
+	text-align: start;
+	margin: 0;
+}
+::-webkit-scrollbar {
+	background-color: transparent;
+}
+.likebtn {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+.likebtn p {
+	color: $silver;
 }

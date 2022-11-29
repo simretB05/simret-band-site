@@ -6,10 +6,12 @@ import Form from "../form/form";
 function Hero() {
 	const current = new Date();
 	const getLocalList = () => {
-		const storedUserCommentInfo = localStorage.getItem("usersList");
+		const storedUserCommentInfo = localStorage.getItem(
+			"usersListInLocalStorage"
+		);
 		// console.log(storedUserCommentInfo)
 		if (storedUserCommentInfo) {
-			return JSON.parse(localStorage.getItem("usersList"));
+			return JSON.parse(localStorage.getItem("usersListInLocalStorage"));
 		} else {
 			return [];
 		}
@@ -141,7 +143,11 @@ function Hero() {
         
         </div> */}
 				</div>
-				<Form Users={usersList} onAddUser={addUserHandler} />
+				<Form
+					usersList={usersList}
+					setUsersList={setUsersList}
+					onAddUser={addUserHandler}
+				/>
 			</div>
 		</div>
 	);
