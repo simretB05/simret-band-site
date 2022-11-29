@@ -248,12 +248,21 @@ textarea {
 ::-webkit-scrollbar {
 	background-color: transparent;
 }
+.formbtn {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+.deletebtn,
 .likebtn {
 	display: flex;
-	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 }
 .likebtn p {
+	text-align: center;
+	padding: 0.3rem;
 	color: $silver;
 }
