@@ -2,18 +2,23 @@
 
 import React, { useState } from "react";
 import classes from "./form/form.module.scss";
+const current = new Date();
 
-function NewForms({ usersList, onAddUser, setUsersList, data }) {
+const date = `${current.getDate()}/${
+	current.getMonth() + 1
+}/${current.getFullYear()}`;
+
+function NewForms({ onAddUser, data, onRemove }) {
 	const [liks, setLiks] = useState(0);
 
 	const addLiks = (event) => {
 		event.preventDefault();
 		setLiks((x) => x + 1);
 	};
-	const onRemove = () => {
-		setUsersList(usersList.filter((el) => el.id !== data.id));
-		console.log(data.id);
-	};
+	// const onRemove = () => {
+	// 	setUsersList(usersList.filter((el) => el.id !== data.id));
+	// 	console.log(data.id);
+	// };
 
 	return (
 		<div className={classes.comment__main} key={data.id}>
@@ -21,7 +26,7 @@ function NewForms({ usersList, onAddUser, setUsersList, data }) {
 			<div className={classes.comment__main__container}>
 				<ul className={classes.comment__main__list}>
 					<li className={classes.comment__main__list__name}>{data.name}</li>
-					<li className={classes.comment__main__list__date}>{data.date}</li>
+					<li className={classes.comment__main__list__date}>{date}</li>
 				</ul>
 
 				<div className={classes.comment__main__text__container}>
@@ -31,10 +36,13 @@ function NewForms({ usersList, onAddUser, setUsersList, data }) {
 						type="text"
 						name="comment"
 						placeholder="Add a new comment"
-						value={data.comment}
+						defaultValue={data.comment}
 					></textarea>
 					<div className={classes.formbtn}>
-						<button onClick={onRemove} className={classes.deletebtn}>
+						<button
+							onClick={() => onRemove(data.id)}
+							className={classes.deletebtn}
+						>
 							<img src="./assets/icons/icon-delete.svg" alt="delete button" />
 						</button>
 						<button onClick={addLiks} className={classes.likebtn}>

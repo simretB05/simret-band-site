@@ -349,4 +349,14 @@ textarea {
   text-align: center;
   padding: 0.3rem;
   color: #afafaf;
+}
+
+.spinner-card {
+  display: block;
+  margin: auto;
+  width: 100px;
+}
+
+.spinner {
+  width: 100%;
 }/*# sourceMappingURL=form.module.css.map */

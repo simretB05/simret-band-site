@@ -4,40 +4,75 @@ import React, { useState, useEffect } from "react";
 import classes from "../hero/hero.module.scss";
 import Form from "../form/form";
 function Hero() {
-	const current = new Date();
-	const getLocalList = () => {
-		const storedUserCommentInfo = localStorage.getItem(
-			"usersListInLocalStorage"
-		);
-		// console.log(storedUserCommentInfo)
-		if (storedUserCommentInfo) {
-			return JSON.parse(localStorage.getItem("usersListInLocalStorage"));
-		} else {
-			return [];
-		}
-	};
-	const [usersList, setUsersList] = useState(getLocalList());
+	//saving to local storage
+	// const getLocalList = () => {
+	// 	const storedUserCommentInfo = localStorage.getItem(
+	// 		"usersListInLocalStorage"
+	// 	);
+	// console.log(storedUserCommentInfo)
+	// 	if (storedUserCommentInfo) {
+	// 		// return JSON.parse(localStorage.getItem("usersListInLocalStorage"));
+	// 	} else {
+	// 		return [];
+	// 	}
+	// };
+	const [usersList, setUsersList] = useState([]);
+	const [isLoding, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		localStorage.setItem("usersListInLocalStorage", JSON.stringify(usersList));
-	}, [usersList]);
-
-	const addUserHandler = (uName, uComment) => {
-		setUsersList((usersList) => {
-			return [
-				...usersList,
-				{
-					name: uName,
-					comment: uComment,
-					id: Math.random().toString(),
-					date: `${current.getDate()}/${
-						current.getMonth() + 1
-					}/${current.getFullYear()}`,
-				},
-			];
-		});
+		// localStorage.setItem("usersListInLocalStorage", JSON.stringify(usersList));
+		fetchData();
+	}, []);
+	//fetching from API
+	const fetchData = async () => {
+		const response = await fetch(`/data?_sort=id&_order=desc`);
+		const jsonData = await response.json();
+		setUsersList(jsonData);
+		setIsLoading(false);
 	};
 
+	// const addUserHandler = (uName, uComment) => {
+
+	// 	setUsersList((usersList) => {
+	// 		return [
+	// 			...usersList,
+	// 			{
+	// 				name: uName,
+	// 				comment: uComment,
+	// 				id: Math.random().toString(),
+	// 				date: `${current.getDate()}/${
+	// 					current.getMonth() + 1
+	// 				}/${current.getFullYear()}`,
+	// 			},
+	// 		];
+	// 	});
+	// };
+
+	const addUserHandler = async (nweComment) => {
+		const response = await fetch("/data", {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(nweComment),
+		});
+
+		const data = await response.json();
+
+		setUsersList([data, ...usersList]);
+		console.log(data);
+	};
+
+	const onRemove = async (id) => {
+		await fetch(`/data/${id}`, {
+			method: "DELETE",
+			headers: {
+				"Content-type": "application/json",
+			},
+		});
+		setUsersList(usersList.filter((el) => el.id !== id));
+		console.log(id);
+	};
 	return (
 		<div>
 			<div className="content">
@@ -147,6 +182,9 @@ function Hero() {
 					usersList={usersList}
 					setUsersList={setUsersList}
 					onAddUser={addUserHandler}
+					isLoding={isLoding}
+					setIsLoading={setIsLoading}
+					onRemove={onRemove}
 				/>
 			</div>
 		</div>
